@@ -1,0 +1,9 @@
+.video-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.thumbnail-card {
+    /* max-width: 100px; */
+}
