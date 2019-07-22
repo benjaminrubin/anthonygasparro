@@ -52,15 +52,22 @@
 
 
 
+        <!-- Video Player Container -->
         <div id="gallery-player-container">
             <div class="player-container">
+                <p class=" text-center mb-0" id="project-name">
+                    GEICO
+                </p>
+                <p class=" text-center mb-2" id="director-name">
+                    Hank Perlman
+                </p>
                 <div class="iframe-container">
                     <iframe src="https://player.vimeo.com/video/347943301?title=0&byline=0&portrait=0"
-                        allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        allow="autoplay; fullscreen" allowfullscreen id="iframe"></iframe>
                 </div>
                 <div class="button-group">
-                    <button id="btn-prev" class="btn btn-sm btn-outline-secondary">Prev</button> 
-                    <button id="btn-next" class="btn btn-sm btn-outline-secondary">Next</button>        
+                    <button id="btn-prev" class="btn btn-sm btn-outline-secondary">Prev</button>
+                    <button id="btn-next" class="btn btn-sm btn-outline-secondary">Next</button>
                 </div>
             </div>
             <hr>
@@ -68,10 +75,10 @@
 
         <!-- Video gallery -->
         <main class="video-gallery container">
-            
+
             <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
+            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail-card">
+                <div class="card mb-4 shadow-sm" id="1">
                     <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
                         alt="thumbnail 1">
                     <div class="card-body p-0 py-1">
@@ -84,9 +91,10 @@
                 </div>
             </div>
 
+
             <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
+            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail-card" >
+                <div class="card mb-4 shadow-sm" id="2">
                     <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
                         alt="thumbnail 1">
                     <div class="card-body p-0 py-1">
@@ -99,9 +107,10 @@
                 </div>
             </div>
 
+
             <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
+            <div class="col-sm-12 col-md-6 col-lg-4 thumbnail-card" >
+                <div class="card mb-4 shadow-sm" id="3">
                     <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
                         alt="thumbnail 1">
                     <div class="card-body p-0 py-1">
@@ -114,65 +123,6 @@
                 </div>
             </div>
 
-            <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
-                        alt="thumbnail 1">
-                    <div class="card-body p-0 py-1">
-                        <p class="card-text text-center mb-2">
-                            GEICO<br /> dir. Hank Perlman
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
-                        alt="thumbnail 1">
-                    <div class="card-body p-0 py-1">
-                        <p class="card-text text-center mb-2">
-                            GEICO<br /> dir. Hank Perlman
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
-                        alt="thumbnail 1">
-                    <div class="card-body p-0 py-1">
-                        <p class="card-text text-center mb-2">
-                            GEICO<br /> dir. Hank Perlman
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Thumbnail Card -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
-                        alt="thumbnail 1">
-                    <div class="card-body p-0 py-1">
-                        <p class="card-text text-center mb-2">
-                            GEICO<br /> dir. Hank Perlman
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
 
 
@@ -183,19 +133,133 @@
         </footer>
     </div>
 
+
+
+    <!-- jQuery Related -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
     <!-- JavaScript -->
     <script>
 
 
+        var counter = 0;
+
+        // Array containing info on all commercials:
+
+        var commercials = [
+            {
+                vimeo: "https://player.vimeo.com/video/347943301?title=0&byline=0&portrait=0",
+                image: "img/video_thumbnails/thumb_1.png",
+                name: "GEICO",
+                director: "Hank Perlman"
+            },
+            {
+                vimeo: "https://player.vimeo.com/video/348641658?title=0&byline=0&portrait=0",
+                image: "img/video_thumbnails/test.png",
+                name: "Benja",
+                director: "Ben Rubin"
+            },
+            {
+                vimeo: "https://player.vimeo.com/video/339783733?title=0&byline=0&portrait=0",
+                image: "img/video_thumbnails/test.png",
+                name: "Random",
+                director: "John Rubin"
+            }
+        ];
+
+        $(document).ready(function() {
+
+            $("#btn-prev").prop('disabled', true);
+
+            function updatePlayer() {
+                
+                // Replace vimeo link in iframe
+                $("#iframe").attr("src", commercials[counter].vimeo);
+                
+                // Replace director name
+                $("#director-name").html(commercials[counter].director);
+
+                // Replace project name
+                $("#project-name").html(commercials[counter].name);
+
+            }
+
+            function updatePlayerButtons() {
+                
+                // If counter is set below or equal to zero
+                if(counter == 0) {
+
+                    // Disable previous button
+                    $("#btn-prev").prop('disabled', true);
+                } 
+
+                // If counter is equal to the size of commercials array
+                else if(counter == commercials.length -1) {
+                    $("#btn-next").prop('disabled', true);
+                }
+
+                // Enable all buttons
+                else {
+                    $("#btn-prev").prop('disabled', false);
+                    $("#btn-next").prop('disabled', false);
+                }
+            }
+
+            // Click on thumbnail
+            $(".card").click(function(){
+                var thumbnailVal = $(this).get(0).id -1;
+                if (thumbnailVal != counter) {
+                    counter = thumbnailVal;
+                    updatePlayer();
+                }
+                updatePlayerButtons();
+            });
+
+
+            // Click on previous button
+            $("#btn-prev").click(function () {
+                if(counter <= 0) {
+                    counter = 0;
+                    //disable previous button
+                    $("#btn-prev").prop('disabled', true);
+
+                } else {
+                    counter--;
+                    $("#btn-next").prop('disabled', false);
+                    updatePlayer();
+                }                
+                
+                updatePlayerButtons();
+                
+            });
+
+            // Click on next button
+            $("#btn-next").click(function () {
+                if(counter >= commercials.length -1){
+                    counter = commercials.length - 1;
+                    $("#btn-next").prop('disabled', true);
+                }
+                else {
+                    counter++;
+                    $("#btn-prev").prop('disabled', false);
+                    updatePlayer();
+                }                
+
+                updatePlayerButtons();
+            });
+
+
+
+        });
+
+
+
 
     </script>
-
-    <!-- jQuery Related -->
-
     <!-- Bootstrap Related -->
 
     <!-- Custom scripts -->
-    <script src="js/global.js"></script>
 
 </body>
 
