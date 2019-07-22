@@ -9,7 +9,9 @@ main a {
 }
 
 main a:hover {
-    border-bottom: 1px solid darkseagreen;
+    /* border-bottom: 1px solid darkseagreen; */
+    text-decoration: underline;
+    color: darkseagreen;
 }
 
 .contact-container {
