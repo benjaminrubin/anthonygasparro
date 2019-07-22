@@ -2,7 +2,7 @@
 #gallery-player-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    display: block;
+    display: none;
 }
 
 .player-container {

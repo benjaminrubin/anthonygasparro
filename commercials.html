@@ -208,6 +208,9 @@
 
             // Click on thumbnail
             $(".card").click(function(){
+            
+                $("#gallery-player-container").fadeIn();
+
                 var thumbnailVal = $(this).get(0).id -1;
                 if (thumbnailVal != counter) {
                     counter = thumbnailVal;
@@ -229,7 +232,7 @@
                     $("#btn-next").prop('disabled', false);
                     updatePlayer();
                 }                
-                
+
                 updatePlayerButtons();
                 
             });
