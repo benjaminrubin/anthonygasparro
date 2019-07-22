@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
-.thumbnail-card {
-    /* max-width: 100px; */
+
+    @media (min-width: 600px) {
+    .video-gallery {
+        margin-top: 3rem;
+    }
 }
