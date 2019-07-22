@@ -1,0 +1,57 @@
+body {
+    position: relative;
+    font-family: Source Sans Pro, sans-serif;
+    /* font-weight: 500; */
+    background-color: #f8f9fa;
+}
+
+header {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    /* text-transform: lowercase; */
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    margin-top: 0;
+    font-weight: 300;
+    color: gray;
+    /* text-transform: uppercase; */
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+footer {
+    text-align: center;
+    bottom: 0;
+    font-weight: 400;
+    color: gray;
+    font-size: .9rem;
+}
+
+.mobile-header {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .mobile-header {
+        display: none;
+    }
+    
+}

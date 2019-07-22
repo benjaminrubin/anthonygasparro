@@ -1,0 +1,42 @@
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav > ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.desktop-nav > ul > li {
+    margin: 0 40px;
+    text-align: center;
+    width: 130px;
+}
+
+.desktop-nav > ul > li a {
+    text-decoration: none;
+    color: gray;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.desktop-nav > ul > li a:hover {
+    color: black;
+}
+
+.selected-page {
+    color: black !important;
+    border-bottom: 0.5px solid black;
+}
+
+
+@media (min-width: 600px) {
+
+    .desktop-nav {
+        display: inline;
+    }
+}
