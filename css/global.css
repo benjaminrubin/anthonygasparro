@@ -5,6 +5,7 @@ body {
     font-family: Source Sans Pro, sans-serif;
     /* font-weight: 500; */
     background-color: #f8f9fa;
+    font-size: 14px;
 }
 
 * {
@@ -14,6 +15,10 @@ body {
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+p {
+    font-size: .8rem;
 }
 
 .body-container {
@@ -40,14 +45,19 @@ h1 {
     /* text-transform: lowercase; */
     font-weight: 500;
     margin-bottom: .5rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 h4 {
     margin-top: 0;
     font-weight: 300;
     color: gray;
-    font-size: .8rem;
+    font-size: 1.2rem;
     /* text-transform: uppercase; */
 }
 
@@ -69,8 +79,6 @@ footer {
 .mobile-header {
     display: block;
     text-align: center;
-    font-weight: 600;
-    font-size: 1rem;
     text-transform: uppercase;
 }
 
@@ -81,13 +89,24 @@ footer {
 
 
 @media (min-width: 600px) {
+    html,body {
+        font-size: 16px;
+    }
+
+
     .mobile-header {
         display: none;
     }
     h1 {
         font-size: 2rem;
     }
+    h2 {
+        font-size: 1.6rem;
+    }
     h4 {
         font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
     }
 }
