@@ -29,12 +29,14 @@
     padding-top: 1rem;
     max-width: 500px;
     position: relative;
+    outline: none;
 }
 
 #btn-prev {
     position: absolute;
     left: 0;
     margin-left: 10px;
+    outline: none;
 }
 
 #btn-next {
