@@ -6,7 +6,7 @@
 }
 
 .player-container {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto auto;
     padding-bottom: 3rem;
 }
@@ -27,22 +27,27 @@
 
 .button-group {
     padding-top: 1rem;
-    max-width: 500px;
+    max-width: 600px;
     position: relative;
     outline: none;
+    text-align: center;
 }
 
 #btn-prev {
     position: absolute;
     left: 0;
     margin-left: 10px;
-    outline: none;
 }
 
 #btn-next {
     position: absolute;
     right: 0;
     margin-right: 10px;
+}
+
+#btn-close {
+    position: relative;
+    /* cursor: pointer; */
 }
 
 

@@ -66,8 +66,9 @@
                         allow="autoplay; fullscreen" allowfullscreen id="iframe"></iframe>
                 </div>
                 <div class="button-group">
-                    <button id="btn-prev" class="btn btn-sm btn-outline-secondary">Prev</button>
-                    <button id="btn-next" class="btn btn-sm btn-outline-secondary">Next</button>
+                    <button id="btn-prev" class="btn btn-outline-secondary">Prev</button>
+                    <button id="btn-close" class="btn btn-outline-secondary">Close</button>
+                    <button id="btn-next" class="btn btn-outline-secondary">Next</button>
                 </div>
             </div>
             <hr>
@@ -170,15 +171,13 @@
 
         $(document).ready(function() {
 
-            $("#btn-prev").prop('disabled', true);
-
             function updatePlayer() {
                 
                 // Replace vimeo link in iframe
                 $("#iframe").attr("src", commercials[counter].vimeo);
                 
                 // Replace director name
-                $("#director-name").html(commercials[counter].director);
+                $("#director-name").html("dir. " + commercials[counter].director);
 
                 // Replace project name
                 $("#project-name").html(commercials[counter].name);
@@ -189,7 +188,6 @@
                 
                 // If counter is set below or equal to zero
                 if(counter == 0) {
-
                     // Disable previous button
                     $("#btn-prev").prop('disabled', true);
                 } 
@@ -210,14 +208,17 @@
             $(".card").click(function(){
             
                 counter = $(this).get(0).id -1;
+                
+                // Populate player with relevant information
                 updatePlayer();
+
+                // Update the display of the buttons
                 updatePlayerButtons();
                 
 
                 // Fade in the gallery
                 if($("#gallery-player-container").css('display') == "none"){
-                    console.log("It was none!");
-                    $("#gallery-player-container").fadeIn();
+                    $("#gallery-player-container").fadeIn(320);
                 }
                 
             });
@@ -255,6 +256,10 @@
                 updatePlayerButtons();
             });
 
+            // Click on close button
+            $("#btn-close").click(function () {
+                $("#gallery-player-container").fadeOut(320);
+            });
 
 
         });
