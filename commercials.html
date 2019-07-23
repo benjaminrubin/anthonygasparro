@@ -223,8 +223,8 @@
 
                 // Jump to the top of the page
                 $('html, body').animate({
-                    scrollTop: $("#gallery-player-container").offset().top
-                }, 100);
+                    scrollTop: $("#gallery-player-container").offset().top - 20
+                }, -200);
 
             });
 
@@ -260,6 +260,7 @@
 
                 updatePlayerButtons();
             });
+
 
             // Click on close button
             $("#btn-close").click(function () {
