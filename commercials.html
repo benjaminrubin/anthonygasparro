@@ -58,8 +58,8 @@
         <!-- Video Player Container -->
         <div id="gallery-player-container">
             <div class="player-container">
-                <p class=" text-center mb-0" id="project-name"></p>
-                <p class=" text-center mb-2" id="director-name"></p>
+                <p class="text-center mb-0" id="project-name"></p>
+                <p class="text-center mb-2" id="director-name"></p>
                 <div class="iframe-container">
                     <iframe src="" allow="autoplay; fullscreen" allowfullscreen id="iframe"></iframe>
                 </div>
@@ -153,21 +153,141 @@
                 vimeo: "https://player.vimeo.com/video/347943301?title=0&byline=0&portrait=0",
                 image: "img/video_thumbnails/thumb_1.png",
                 name: "GEICO",
-                director: "Hank Perlman"
+                director: "dir. Hank Perlman"
             },
             {
                 vimeo: "https://player.vimeo.com/video/348641658?title=0&byline=0&portrait=0",
                 image: "img/video_thumbnails/test.png",
                 name: "Benja",
-                director: "Ben Rubin"
+                director: "dir. Ben Rubin"
             },
             {
                 vimeo: "https://player.vimeo.com/video/339783733?title=0&byline=0&portrait=0",
                 image: "img/video_thumbnails/test.png",
                 name: "Random",
-                director: "John Rubin"
-            }
-        ];
+                director: "dir. John Rubin"
+            },
+            {
+                name: "Samsung",
+                director: "dir. Brian Beletic",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Time Warner Cable",
+                director: "dir. Steve Miller",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Lexus",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Geico",
+                director: "dir. Hank Perlman",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Allstate",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "NBA2K",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Ikea",
+                director: "dir. Phil Morrison",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "T-mobile",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Amazon",
+                director: "dir. Randy Krallman",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Chase",
+                director: "dir. Brian Beletic",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Verizon",
+                director: "dir. Kevin Thomas",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Verizon Fios",
+                director: "dir. David Gray",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Espn",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Tide",
+                director: "dir. Matt Smuckler",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Adidas",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Audi",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Air Jordan",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "MasterCard",
+                director: "dir. Jun Diaz",
+                vimeo: "",
+                image: "",
+            },
+            {
+                name: "Nike China",
+                director: "dir. Stacy Wall",
+                vimeo: "",
+                image: "",
+            }];
+
+
+
+
+
+
+
 
         $(document).ready(function () {
 
@@ -177,7 +297,7 @@
                 $("#iframe").attr("src", commercials[counter].vimeo);
 
                 // Replace director name
-                $("#director-name").html("dir. " + commercials[counter].director);
+                $("#director-name").html(commercials[counter].director);
 
                 // Replace project name
                 $("#project-name").html(commercials[counter].name);
@@ -220,7 +340,6 @@
                 if ($("#gallery-player-container").css('display') == "none") {
                     $("#gallery-player-container").fadeIn(320);
                 }
-
 
                 // Jump to the top of the page
                 $('html, body').animate({
