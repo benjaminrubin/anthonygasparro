@@ -26,6 +26,9 @@
 }
 
 .button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     padding-top: 1rem;
     max-width: 600px;
     position: relative;
@@ -33,16 +36,8 @@
     text-align: center;
 }
 
-#btn-prev {
-    position: absolute;
-    left: 0;
-    margin-left: 10px;
-}
-
-#btn-next {
-    position: absolute;
-    right: 0;
-    margin-right: 10px;
+button {
+    display: block;
 }
 
 #btn-close {
