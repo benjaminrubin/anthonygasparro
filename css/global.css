@@ -82,9 +82,6 @@ footer {
     text-transform: uppercase;
 }
 
-.mobile-header:hover {
-    cursor: pointer;
-}
 
 .card {
     border: none;

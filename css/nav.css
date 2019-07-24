@@ -70,3 +70,52 @@
     cursor: pointer !important;
   }
 
+
+#sidebar-wrapper {
+    position: fixed;
+    z-index: 80;
+    right: -250px;
+    height: 100%;
+    background-color: #F8F9FA;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    width: 250px;
+
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper.active {
+    right: 0px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: gray;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sidebar-nav a:hover {
+    color: black;
+}
+
+.sidebar-brand {
+    font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+
+    .menu-toggle {
+        display: none;
+    }
+}
