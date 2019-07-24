@@ -76,7 +76,7 @@
         <!-- Video gallery -->
         <main id="video-gallery" class="container">
 
-            <!-- Thumbnail Card -->
+            <!-- Thumbnail Card
             <div class="col-sm-12 col-md-6 col-lg-4 thumbnail-card">
                 <div class="card mb-4 shadow-sm" id="1">
                     <img class="bd-placeholder-img card-img-top" src="img/video_thumbnails/thumb_1.png"
@@ -85,11 +85,9 @@
                         <p class="card-text text-center mb-2">
                             GEICO<br /> dir. Hank Perlman
                         </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </main>
 
@@ -269,11 +267,60 @@
 
 
 
-
+        var i = 0;
 
 
 
         $(document).ready(function () {
+
+            // Populate the page with thumbnail cards of all the videos
+
+
+            for(i in commercials) {
+                // console.log(item);
+
+                var thumbnailCard = document.createElement("div");
+                let thumbClasses = [ 'col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
+
+                thumbnailCard.classList.add(...thumbClasses);
+
+                var card = document.createElement("div");
+                let cardClasses = ['card', 'mb-4', 'shadow-sm']
+                card.classList.add(...cardClasses);
+                card.id = i;
+
+                var image = document.createElement("img");
+                let imageClasses = ['bd-placeholder-img', 'card-img-top'];
+                image.classList.add(...imageClasses);
+                image.src = "img/video_thumbnails/" + commercials[i].thumbnailUrl;
+                image.alt = "thumbnail " + i;
+
+                var cardBody = document.createElement("div");
+                cardBodyClasses = ['card-body', 'p-0', 'py-1'];
+                cardBody.classList.add(...cardBodyClasses);
+
+                var paragraph = document.createElement("p");
+                let parClasses = ['card-text', 'text-center', 'mb-2'];
+                paragraph.classList.add(...parClasses);
+                paragraph.innerHTML = commercials[i].title + "<br/>" + commercials[i].subtitle;
+
+
+                cardBody.appendChild(paragraph);    
+                card.appendChild(image);
+                card.appendChild(cardBody);
+                thumbnailCard.appendChild(card);
+                document.getElementById("video-gallery").appendChild(thumbnailCard);
+                i++;
+            }
+
+
+
+
+
+
+
+
+            // Update video player to contain information relevant to thumbnail clicked
 
             function updatePlayer() {
 
@@ -290,6 +337,8 @@
                 $(".iframe-container").attr("padding", commercials[counter].padding);
 
             }
+
+            // Disable previous button or next button when at the edges of the commercials array
 
             function updatePlayerButtons() {
 
@@ -314,7 +363,7 @@
             // Click on thumbnail
             $(".card").click(function () {
 
-                counter = $(this).get(0).id - 1;
+                counter = $(this).get(0).id;
                 console.log("Counter is " + counter);
                 console.log(commercials[counter]);
 
@@ -323,7 +372,6 @@
 
                 // Update the display of the buttons
                 updatePlayerButtons();
-
 
                 // Fade in the gallery if not displayed
                 if ($("#gallery-player-container").css('display') == "none") {
@@ -370,8 +418,7 @@
                 updatePlayerButtons();
             });
 
-
-            // Click on close button
+            // Clicking on close button will close the video player
             $("#btn-close").click(function () {
                 $("#gallery-player-container").fadeOut(320);
             });

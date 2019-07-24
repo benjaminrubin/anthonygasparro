@@ -70,6 +70,11 @@ button {
     cursor: pointer !important;
 }
 
+img {
+    /* object-fit: contain; */
+}
+
+
 @media (min-width: 600px) {
     .video-gallery {
         margin-top: 3rem;
