@@ -103,6 +103,7 @@
     color: gray;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 2rem;
 }
 
 .sidebar-nav a:hover {
@@ -110,7 +111,7 @@
 }
 
 .sidebar-brand {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
 }
 
 @media (min-width: 600px) {
