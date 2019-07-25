@@ -15,19 +15,20 @@ main a:hover {
 }
 
 main i {
-    color: gray;
+    color: darkgray;
     font-size: 1.2rem;
     position: relative;
     top: 2px;
     left: -4px;
 }
 
-main a {
+main p {
+    color: gray;
     font-size: 2rem;
 }
 
 @media (min-width: 600px) {
-    main a {
+    main p {
         font-size: 1.5rem;
     }
 }
