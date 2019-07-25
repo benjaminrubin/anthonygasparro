@@ -6,6 +6,11 @@ body {
     /* font-weight: 500; */
     background-color: #f8f9fa;
     font-size: 14px;
+
+    /* Font smoothing */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
