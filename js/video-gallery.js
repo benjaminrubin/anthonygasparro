@@ -187,7 +187,7 @@ $(document).ready(function () {
         cardBody.classList.add(...cardBodyClasses);
 
         var paragraph = document.createElement("p");
-        let parClasses = ['card-text', 'text-center', 'mb-2'];
+        let parClasses = ['card-text', 'text-center', 'mb-2', 'mt-1'];
         paragraph.classList.add(...parClasses);
         paragraph.innerHTML = commercials[i].title + "<br/>" + commercials[i].subtitle;
 
