@@ -125,6 +125,8 @@ footer {
 #branja-logo {
     filter: grayscale(100%);
     transition: .12s;
+    position: relative;
+    left: 2px;
     width: 1.3rem;
     height: 1.3rem;
 }
@@ -135,8 +137,8 @@ footer {
 
 @media (min-width: 600px) {
     #branja-logo {
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 1.675rem;
+        height: 1.675rem;
     }
 
 }
