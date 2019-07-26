@@ -81,6 +81,10 @@ footer {
     font-size: .9rem;
 }
 
+footer p {
+    margin-bottom: .4rem;
+}
+
 .mobile-header {
     display: block;
     text-align: center;
