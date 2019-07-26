@@ -116,3 +116,28 @@ footer {
         font-size: 1rem;
     }
 }
+
+
+#branja-url {
+    color: gray;
+}
+
+#branja-logo {
+    filter: grayscale(100%);
+    transition: .12s;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+#branja-url:hover #branja-logo {
+    filter: grayscale(0%);
+}
+
+@media (min-width: 600px) {
+    #branja-logo {
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+
+}
+
