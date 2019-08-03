@@ -93,11 +93,6 @@ footer p {
     font-size: .75rem;
 }
 
-.mobile-header {
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-}
 
 
 .card {
@@ -112,9 +107,7 @@ footer p {
     }
 
 
-    .mobile-header {
-        display: none;
-    }
+   
     h1 {
         font-size: 2rem;
     }

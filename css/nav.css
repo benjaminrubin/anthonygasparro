@@ -30,15 +30,27 @@
 }
 
 .selected-page {
-    color: black !important;
-    border-bottom: 0.5px solid black;
+    color: turquoise !important;
+    padding-bottom: .6rem;
+    border-bottom: 0.5px solid turquoise;
 }
 
 
-@media (min-width: 600px) {
+.mobile-header {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 767px) {
 
     .desktop-nav {
         display: inline;
+    }
+
+    .mobile-header {
+        display: none;
     }
 }
 
@@ -114,7 +126,7 @@
     font-size: 1.2rem !important;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 767px) {
 
     .menu-toggle {
         display: none;
