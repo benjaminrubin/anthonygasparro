@@ -1,10 +1,15 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500|Noto+Serif:700i&display=swap');
+
+
+
 html,
 body {
     position: relative;
     height: 100%;
-    font-family: Source Sans Pro, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     /* font-weight: 500; */
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     font-size: 14px;
 
     /* Font smoothing */
@@ -41,30 +46,33 @@ footer {
 }
 
 header {
-    text-align: center;
+    /* text-align: center; */
     margin: 2.5rem 0;
 }
 
-h1 {
+header h1 {
+    font-family: 'Noto Serif', serif;
     text-transform: uppercase;
     /* text-transform: lowercase; */
-    font-weight: 500;
-    margin-bottom: .5rem;
-    font-size: 1.4rem;
+    /* font-weight: 500; */
+    margin-bottom: .1rem;
+    font-size: 1.35rem;
 }
+
+header h4 {
+    margin-top: 0;
+    /* font-weight: 600; */
+    /* color: gray; */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
 
 h2 {
     font-weight: 600;
     font-size: 1.1rem;
 }
 
-h4 {
-    margin-top: 0;
-    font-weight: 300;
-    color: gray;
-    font-size: 1.2rem;
-    /* text-transform: uppercase; */
-}
 
 hr {
     margin-top: 1rem;
@@ -78,11 +86,11 @@ footer {
     bottom: 0;
     font-weight: 400;
     color: gray;
-    font-size: .9rem;
 }
 
 footer p {
     margin-bottom: .4rem;
+    font-size: .75rem;
 }
 
 .mobile-header {
@@ -116,8 +124,9 @@ footer p {
     h4 {
         font-size: 1.5rem;
     }
-    p {
-        font-size: 1rem;
+   
+   footer  p {
+        /* font-size: .75rem; */
     }
 }
 
