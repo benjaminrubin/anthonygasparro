@@ -60,14 +60,14 @@ header h1 {
     /* text-transform: lowercase; */
     /* font-weight: 500; */
     margin-bottom: .1rem;
-    font-size: 1.35rem;
+    font-size: 1.75rem;
 }
 
 header h4 {
     margin-top: 0;
     /* font-weight: 600; */
     /* color: gray; */
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
