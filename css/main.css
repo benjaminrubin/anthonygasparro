@@ -28,9 +28,9 @@ main > ul > li > a {
     color: black;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.5rem;
     transition: .32s;
-    padding: 0 .5rem;
+    padding: 0 .3rem;
 }
 
 
