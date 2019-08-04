@@ -1,5 +1,6 @@
 .desktop-nav {
     display: none;
+    max-width: 400px;
 }
 
 .desktop-nav > ul {
@@ -13,9 +14,10 @@
 }
 
 .desktop-nav > ul > li {
-    margin: 0 40px;
+    margin-left: .5rem;
+    margin-right: .5rem;
     text-align: center;
-    width: 130px;
+    /* width: 130px; */
 }
 
 .desktop-nav > ul > li a {
