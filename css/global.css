@@ -27,20 +27,21 @@ body {
     box-sizing: border-box;
 }
 
+.full-page {
+    height: 100vh;
+}
+
+.full-page footer {
+    position: absolute;
+    bottom: 40px;
+}
+
 p {
     font-size: .8rem;
 }
 
-.body-container {
-    min-height: 100vh;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    padding-bottom: 100px;
-}
-
 footer {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
 }
@@ -86,8 +87,9 @@ hr {
 }
 
 footer {
+    display: block;
     text-align: center;
-    bottom: 0;
+    
     font-weight: 400;
     color: gray;
 }
