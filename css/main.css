@@ -29,7 +29,6 @@ main > ul > li > a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 3rem;
-    letter-spacing: 2px;
     transition: .32s;
     padding: 0 .5rem;
 }
@@ -109,7 +108,7 @@ div > a {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 5.25rem;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
 
     main > div {
