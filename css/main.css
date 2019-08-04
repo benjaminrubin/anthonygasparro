@@ -58,6 +58,8 @@ div > a {
 .contact-link {
     transition: .32s;
     padding: 0 .5rem;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .contact-link:hover {
