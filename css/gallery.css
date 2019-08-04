@@ -62,6 +62,10 @@ button {
     /* cursor: pointer; */
 }
 
+#btn-prev {
+    transform: rotate(180deg);
+}
+
 
 #video-gallery {
     display: flex;
