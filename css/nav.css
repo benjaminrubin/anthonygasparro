@@ -136,8 +136,9 @@
 
 .sidebar-brand {
     font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: bold;
     font-size: 1.2rem !important;
-    font-weight: 700;
 }
 
 @media (min-width: 767px) {
