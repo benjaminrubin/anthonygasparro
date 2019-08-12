@@ -31,8 +31,6 @@ main>ul>li>a {
     font-size: 2.5rem;
     transition: .32s;
     padding: 0 .3rem;
-    font-family: 'Heebo', sans-serif;
-    font-weight: 500;
 }
 
 main>ul>li>a:hover {
@@ -70,27 +68,6 @@ div>a {
 
 /* "+" Link */
 
-.more-link-box {
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    transition: .32s;
-    text-align: center;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 5rem;
-    /* The same as your div height */
-}
-
-.more-link-box:hover {
-    /* color: #F6C2BF; */
-}
-
-.more-link-box:hover #more-link {
-    /* color: white; */
-    color: #F6C2BF;
-}
-
 #more-link {
     font-size: 3.5rem;
     font-weight: 200;
@@ -98,6 +75,11 @@ div>a {
     font-family: Helvetica, sans-serif;
     transition: .32s;
     color: aqua;
+}
+
+#more-link:hover {
+    /* color: white; */
+    color: #F6C2BF;
 }
 
 @media (min-width: 600px) {
