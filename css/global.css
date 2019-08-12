@@ -8,7 +8,6 @@ body {
     position: relative;
     height: 100%;
     font-family: 'Heebo', sans-serif;
-    font-weight: 400;
     /* background-color: #f8f9fa; */
     font-size: 12px;
     /* Font smoothing */
@@ -52,20 +51,17 @@ footer {
 }
 
 header h1 {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Merriweather', serif;
     font-style: italic;
     font-weight: bold;
     text-transform: uppercase;
-    /* text-transform: lowercase; */
-    /* font-weight: 500; */
     margin-bottom: .1rem;
     font-size: 1.75rem;
 }
 
 header h4 {
     margin-top: 0;
-    /* font-weight: 600; */
-    /* color: gray; */
+    /* font-family: 'Heebo', sans-serif; */
     font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;

@@ -8,7 +8,7 @@ main ul {
     margin: auto auto;
 }
 
-main > div {
+main>div {
     max-width: 800px;
     margin: auto auto;
     margin-top: 3rem;
@@ -23,30 +23,30 @@ main ul li {
 
 
 /* Commercials and Stills links */
-main > ul > li > a {
+
+main>ul>li>a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 2.5rem;
     transition: .32s;
     padding: 0 .3rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
 }
 
-
-main > ul > li > a:hover {
-    color: white;
-    background-color: aqua;
+main>ul>li>a:hover {
+    color: aqua;
+    /* background-color: aqua; */
 }
-
 
 main a:hover {
     color: black;
     text-decoration: none;
 }
 
-div > a {
-    font-family: 'Noto Serif', serif;
+div>a {
+    font-family: 'Merriweather', serif;
     text-transform: uppercase;
     color: black;
     font-size: 2rem;
@@ -54,6 +54,7 @@ div > a {
 
 
 /* Contact Link */
+
 .contact-link {
     transition: .32s;
     padding: 0 .5rem;
@@ -62,62 +63,56 @@ div > a {
 }
 
 .contact-link:hover {
-    color: white;
-    background-color: green;
+    color: #4CAF4F;
 }
 
+
 /* "+" Link */
+
 .more-link-box {
     display: block;
     width: 5rem;
     height: 5rem;
     transition: .32s;
     text-align: center;
-
     text-align: center;
     vertical-align: middle;
-    line-height: 5rem;       /* The same as your div height */
-
+    line-height: 5rem;
+    /* The same as your div height */
 }
 
 .more-link-box:hover {
-    background-color: #F6C2BF;
+    /* color: #F6C2BF; */
 }
 
 .more-link-box:hover .more-link {
-    color: white;
+    /* color: white; */
+    color: #F6C2BF;
 }
 
 .more-link {
     font-size: 3.5rem;
     transition: .32s;
-    color: turquoise;
+    color: aqua;
 }
 
-
-
 @media (min-width: 600px) {
-
     main ul li {
         padding-bottom: 2rem;
     }
-
-    main > ul > li > a {
+    main>ul>li>a {
         text-decoration: none;
         color: black;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 5.25rem;
         letter-spacing: 2px;
     }
-
-    main > div {
+    main>div {
         margin-top: 5rem;
         flex-direction: row;
     }
-    
     .more-link {
         font-size: 5.5rem;
-
     }
 }
