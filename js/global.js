@@ -16,13 +16,8 @@ $(document).ready(function() {
 
 
     $homelinks.mouseover(function(e) {
-
-        var $curr = $(this);
-        setTimeout(function() {
-            $homelinks.not(this).addClass('home-link-faded');
-            $curr.removeClass('home-link-faded');
-        }, 300);
-
+        $homelinks.not(this).addClass('home-link-faded');
+        $(this).removeClass('home-link-faded');
     });
 
     $homelinks.mouseleave(function(e) {
