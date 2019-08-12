@@ -21,7 +21,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $homelinks.not(this).addClass('home-link-faded');
             $curr.removeClass('home-link-faded');
-        }, 500);
+        }, 300);
 
     });
 
