@@ -77,8 +77,11 @@ div>a {
     color: aqua;
 }
 
+.home-link-faded {
+    color: #E2E2E2 !important;
+}
+
 #more-link:hover {
-    /* color: white; */
     color: #F6C2BF;
 }
 

@@ -1,3 +1,5 @@
+var $homelinks = $(".home-link");
+
 $(document).ready(function() {
 
     // Mobile Menu related
@@ -11,5 +13,20 @@ $(document).ready(function() {
 
 
     // Homepage link hover effect
+
+
+    $homelinks.mouseover(function(e) {
+
+        var $curr = $(this);
+        setTimeout(function() {
+            $homelinks.not(this).addClass('home-link-faded');
+            $curr.removeClass('home-link-faded');
+        }, 500);
+
+    });
+
+    $homelinks.mouseleave(function(e) {
+        $homelinks.removeClass('home-link-faded');
+    });
 
 });
