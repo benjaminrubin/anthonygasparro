@@ -55,14 +55,15 @@ div>a {
 
 /* Contact Link */
 
-.contact-link {
+#contact-link {
+    font-size: 1.75rem;
     transition: .32s;
     padding: 0 .5rem;
     font-style: italic;
     font-weight: bold;
 }
 
-.contact-link:hover {
+#contact-link:hover {
     color: #4CAF4F;
 }
 
@@ -85,13 +86,16 @@ div>a {
     /* color: #F6C2BF; */
 }
 
-.more-link-box:hover .more-link {
+.more-link-box:hover #more-link {
     /* color: white; */
     color: #F6C2BF;
 }
 
-.more-link {
+#more-link {
     font-size: 3.5rem;
+    font-weight: 200;
+    /* font-family: 'Heebo', sans-serif; */
+    font-family: Helvetica, sans-serif;
     transition: .32s;
     color: aqua;
 }
@@ -112,7 +116,7 @@ div>a {
         margin-top: 5rem;
         flex-direction: row;
     }
-    .more-link {
-        font-size: 5.5rem;
+    #more-link {
+        font-size: 6.5rem;
     }
 }
