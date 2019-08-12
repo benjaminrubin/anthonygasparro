@@ -2,8 +2,7 @@ var counter;
 
 // Array containing info on all commercials:
 
-var commercials = [
-    {
+var commercials = [{
         title: "Geico",
         subtitle: "dir. Hank Perlman",
         thumbnailUrl: "thumb_1.png",
@@ -149,7 +148,8 @@ var commercials = [
         thumbnailUrl: "thumb_21.png",
         videoUrl: "https://player.vimeo.com/video/125701890?title=0&byline=0&portrait=0",
         padding: "56.25% 0 0 0",
-    }];
+    }
+];
 
 
 
@@ -158,16 +158,16 @@ var i = 0;
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     // Populate the page with thumbnail cards of all the videos
 
 
-    for(i in commercials) {
+    for (i in commercials) {
         // console.log(item);
 
         var thumbnailCard = document.createElement("div");
-        let thumbClasses = [ 'col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
+        let thumbClasses = ['col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
 
         thumbnailCard.classList.add(...thumbClasses);
 
@@ -192,7 +192,7 @@ $(document).ready(function () {
         paragraph.innerHTML = commercials[i].title + "<br/>" + commercials[i].subtitle;
 
 
-        cardBody.appendChild(paragraph);    
+        cardBody.appendChild(paragraph);
         card.appendChild(image);
         card.appendChild(cardBody);
         thumbnailCard.appendChild(card);
@@ -204,7 +204,13 @@ $(document).ready(function () {
 
 
 
-
+    var $iframe = $("#iframe");
+    var $projectSubtitle = $("#projectSubtitle");
+    var $projectTitle = $("#project-title");
+    var $iframeContainer = $(".iframe-container");
+    var $btnPrev = $("#btn-prev");
+    var $btnNext = $("#btn-next");
+    var $btnClose = $("#btn-close");
 
 
     // Update video player to contain information relevant to thumbnail clicked
@@ -212,16 +218,16 @@ $(document).ready(function () {
     function updatePlayer() {
 
         // Replace vimeo link in iframe
-        $("#iframe").attr("src", commercials[counter].videoUrl);
+        $iframe.attr("src", commercials[counter].videoUrl);
 
         // Replace director name
-        $("#project-subtitle").html(commercials[counter].subtitle);
+        $projectSubtitle.html(commercials[counter].subtitle);
 
         // Replace project title
-        $("#project-title").html(commercials[counter].title);
+        $projectTitle.html(commercials[counter].title);
 
         // Update the padding of the player
-        $(".iframe-container").attr("padding", commercials[counter].padding);
+        $iframeContainer.attr("padding", commercials[counter].padding);
 
     }
 
@@ -237,18 +243,18 @@ $(document).ready(function () {
 
         // If counter is equal to the size of commercials array
         else if (counter == commercials.length - 1) {
-            $("#btn-next").prop('disabled', true);
+            $btnNext.prop('disabled', true);
         }
 
         // Enable all buttons
         else {
-            $("#btn-prev").prop('disabled', false);
-            $("#btn-next").prop('disabled', false);
+            $btnPrev.prop('disabled', false);
+            $btnNext.prop('disabled', false);
         }
     }
 
     // Click on thumbnail
-    $(".card").click(function () {
+    $(".card").click(function() {
 
         counter = $(this).get(0).id;
         console.log("Counter is " + counter);
@@ -274,15 +280,15 @@ $(document).ready(function () {
 
 
     // Click on previous button
-    $("#btn-prev").click(function () {
+    $btnPrev.click(function() {
         if (counter <= 0) {
             counter = 0;
             //disable previous button
-            $("#btn-prev").prop('disabled', true);
+            $btnPrev.prop('disabled', true);
 
         } else {
             counter--;
-            $("#btn-next").prop('disabled', false);
+            $btnNext.prop('disabled', false);
             updatePlayer();
         }
 
@@ -291,14 +297,13 @@ $(document).ready(function () {
     });
 
     // Click on next button
-    $("#btn-next").click(function () {
+    $btnNext.click(function() {
         if (counter >= commercials.length - 1) {
             counter = commercials.length - 1;
-            $("#btn-next").prop('disabled', true);
-        }
-        else {
+            $btnNext.prop('disabled', true);
+        } else {
             counter++;
-            $("#btn-prev").prop('disabled', false);
+            $btnPrev.prop('disabled', false);
             updatePlayer();
         }
 
@@ -306,11 +311,12 @@ $(document).ready(function () {
     });
 
     // Clicking on close button will close the video player
-    $("#btn-close").click(function () {
+    $btnClose.click(function() {
         $("#gallery-player-container").fadeOut(320);
+
+        // And remove the vimeo link so the video stops playing
+        $iframe.attr("src", "");
     });
 
 
 });
-
-
