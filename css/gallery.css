@@ -65,11 +65,11 @@ button {
 
 #btn-close:hover {
     cursor: pointer;
-    color: white;
+    color: #319EFF;
 }
 
 #btn-close:active {
-    color: #319EFF;
+    color: white;
 }
 
 .player-btn:hover {
@@ -77,11 +77,19 @@ button {
 }
 
 .player-btn:hover g {
-    fill: white;
+    fill: #319EFF;
 }
 
 .player-btn:active g {
-    fill: #319EFF;
+    fill: white;
+}
+
+.player-btn-disabled {
+    cursor: default !important;
+}
+
+.player-btn-disabled g {
+    fill: rgb(190, 190, 190) !important;
 }
 
 #video-gallery {

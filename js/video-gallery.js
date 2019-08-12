@@ -238,18 +238,18 @@ $(document).ready(function() {
         // If counter is set below or equal to zero
         if (counter == 0) {
             // Disable previous button
-            $("#btn-prev").prop('disabled', true);
+            $btnPrev.addClass('player-btn-disabled');
         }
 
         // If counter is equal to the size of commercials array
         else if (counter == commercials.length - 1) {
-            $btnNext.prop('disabled', true);
+            $btnNext.addClass('player-btn-disabled');
         }
 
         // Enable all buttons
         else {
-            $btnPrev.prop('disabled', false);
-            $btnNext.prop('disabled', false);
+            $btnPrev.removeClass('player-btn-disabled');
+            $btnNext.removeClass('player-btn-disabled');
         }
     }
 
