@@ -90,13 +90,20 @@ $(document).ready(function() {
         if (counter == 0) {
             // Disable previous button
             $btnPrev.addClass('player-btn-disabled');
+
+            // If the size of the content array is only 1
+            if (contentArray.length == 1) {
+
+                // Disable the next button as well
+                $btnNext.addClass('player-btn-disabled');
+            }
         }
 
         // If counter is equal to the size of contentArray array
         else if (counter == contentArray.length - 1) {
             $btnNext.addClass('player-btn-disabled');
-        }
 
+        }
         // Enable all buttons
         else {
             $btnPrev.removeClass('player-btn-disabled');
