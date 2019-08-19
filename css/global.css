@@ -51,6 +51,10 @@ footer {
     justify-content: space-between;
 }
 
+header {
+    cursor: default;
+}
+
 header h1 {
     font-family: 'Merriweather', serif;
     font-style: italic;
