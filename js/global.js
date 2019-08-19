@@ -14,15 +14,17 @@ $(document).ready(function() {
 
     // Homepage link hover effect
 
+    // $homelinks.mouseover(function(e) {
+    //     $homelinks.not(this).addClass('home-link-faded');
+    //     $(this).removeClass('home-link-faded');
+    // });
 
-    $homelinks.mouseover(function(e) {
-        $homelinks.not(this).addClass('home-link-faded');
-        $(this).removeClass('home-link-faded');
-    });
+    // $homelinks.mouseleave(function(e) {
+    //     $homelinks.removeClass('home-link-faded');
+    // });
 
-    $homelinks.mouseleave(function(e) {
-        $homelinks.removeClass('home-link-faded');
-    });
+
+
 
 
     $sidebarWrapper = $("#sidebar-wrapper");
