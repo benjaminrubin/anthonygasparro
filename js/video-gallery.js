@@ -1,161 +1,12 @@
 var counter;
 
-// Array containing info on all commercials:
+var contentArray;
 
-var commercials = [{
-        title: "Geico",
-        subtitle: "dir. Hank Perlman",
-        thumbnailUrl: "thumb_1.png",
-        videoUrl: "https://player.vimeo.com/video/328484283?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Samsung",
-        subtitle: "dir. Brian Beletic",
-        thumbnailUrl: "thumb_2.png",
-        videoUrl: "https://player.vimeo.com/video/334341942?title=0&byline=0&portrait=0",
-        padding: "56.34% 0 0 0",
-    },
-    {
-        title: "Time Warner Cable",
-        subtitle: "dir. Steve Miller",
-        thumbnailUrl: "thumb_3.png",
-        videoUrl: "https://player.vimeo.com/video/192165706?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Lexus",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_4.png",
-        videoUrl: "https://player.vimeo.com/video/104029902?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Geico",
-        subtitle: "dir. Hank Perlman",
-        thumbnailUrl: "thumb_5.png",
-        videoUrl: "https://player.vimeo.com/video/266609122?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Allstate",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_6.png",
-        videoUrl: "https://player.vimeo.com/video/125599908?title=0&byline=0&portrait=0",
-        padding: "75% 0 0 0",
-    },
-    {
-        title: "NBA2K",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_7.png",
-        videoUrl: "https://player.vimeo.com/video/276988057?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Ikea",
-        subtitle: "dir. Phil Morrison",
-        thumbnailUrl: "thumb_8.png",
-        videoUrl: "https://player.vimeo.com/video/151716966?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "T-mobile",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_9.png",
-        videoUrl: "https://player.vimeo.com/video/119568146?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Amazon",
-        subtitle: "dir. Randy Krallman",
-        thumbnailUrl: "thumb_10.png",
-        videoUrl: "https://player.vimeo.com/video/155679415?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Chase",
-        subtitle: "dir. Brian Beletic",
-        thumbnailUrl: "thumb_11.png",
-        videoUrl: "https://player.vimeo.com/video/125756771?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Verizon Fios",
-        subtitle: "dir. Kevin Thomas",
-        thumbnailUrl: "thumb_12.png",
-        videoUrl: "https://player.vimeo.com/video/217038871?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Verizon Fios",
-        subtitle: "dir. David Gray",
-        thumbnailUrl: "thumb_13.png",
-        videoUrl: "https://player.vimeo.com/video/187477094?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Espn",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_14.png",
-        videoUrl: "https://player.vimeo.com/video/117670621?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Tide",
-        subtitle: "dir. Matt Smuckler",
-        thumbnailUrl: "thumb_15.png",
-        videoUrl: "https://player.vimeo.com/video/125708809?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Adidas",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_16.png",
-        videoUrl: "https://player.vimeo.com/video/125717536?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Audi",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_17.png",
-        videoUrl: "https://player.vimeo.com/video/117690334?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Air Jordan",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_18.png",
-        videoUrl: "https://player.vimeo.com/video/117690335?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "MasterCard",
-        subtitle: "dir. Jun Diaz",
-        thumbnailUrl: "thumb_19.png",
-        videoUrl: "https://player.vimeo.com/video/187990149?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Sony",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_20.png",
-        videoUrl: "https://player.vimeo.com/video/125598930?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
-        title: "Nike China",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_21.png",
-        videoUrl: "https://player.vimeo.com/video/125701890?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    }
-];
-
-
-
-
-var i = 0;
-
+if (contentType == "commercials") {
+    contentArray = commercials;
+} else if (contentType == "features") {
+    contentArray = features;
+}
 
 
 $(document).ready(function() {
@@ -163,7 +14,7 @@ $(document).ready(function() {
     // Populate the page with thumbnail cards of all the videos
 
 
-    for (i in commercials) {
+    for (i in contentArray) {
         // console.log(item);
 
         var thumbnailCard = document.createElement("div");
@@ -179,7 +30,7 @@ $(document).ready(function() {
         var image = document.createElement("img");
         let imageClasses = ['bd-placeholder-img', 'card-img-top'];
         image.classList.add(...imageClasses);
-        image.src = "img/video_thumbnails/" + commercials[i].thumbnailUrl;
+        image.src = "img/video_thumbnails/" + contentArray[i].thumbnailUrl;
         image.alt = "thumbnail " + i;
 
         var cardBody = document.createElement("div");
@@ -189,7 +40,7 @@ $(document).ready(function() {
         var paragraph = document.createElement("p");
         let parClasses = ['card-text', 'text-center', 'mb-2', 'mt-1'];
         paragraph.classList.add(...parClasses);
-        paragraph.innerHTML = commercials[i].title + "<br/>" + commercials[i].subtitle;
+        paragraph.innerHTML = contentArray[i].title + "<br/>" + contentArray[i].subtitle;
 
 
         cardBody.appendChild(paragraph);
@@ -218,20 +69,20 @@ $(document).ready(function() {
     function updatePlayer() {
 
         // Replace vimeo link in iframe
-        $iframe.attr("src", commercials[counter].videoUrl);
+        $iframe.attr("src", contentArray[counter].videoUrl);
 
         // Replace director name
-        $projectSubtitle.html(commercials[counter].subtitle);
+        $projectSubtitle.html(contentArray[counter].subtitle);
 
         // Replace project title
-        $projectTitle.html(commercials[counter].title);
+        $projectTitle.html(contentArray[counter].title);
 
         // Update the padding of the player
-        $iframeContainer.attr("padding", commercials[counter].padding);
+        $iframeContainer.attr("padding", contentArray[counter].padding);
 
     }
 
-    // Disable previous button or next button when at the edges of the commercials array
+    // Disable previous button or next button when at the edges of the contentArray array
 
     function updatePlayerButtons() {
 
@@ -241,8 +92,8 @@ $(document).ready(function() {
             $btnPrev.addClass('player-btn-disabled');
         }
 
-        // If counter is equal to the size of commercials array
-        else if (counter == commercials.length - 1) {
+        // If counter is equal to the size of contentArray array
+        else if (counter == contentArray.length - 1) {
             $btnNext.addClass('player-btn-disabled');
         }
 
@@ -258,7 +109,7 @@ $(document).ready(function() {
 
         counter = $(this).get(0).id;
         console.log("Counter is " + counter);
-        console.log(commercials[counter]);
+        console.log(contentArray[counter]);
 
         // Populate player with relevant information
         updatePlayer();
@@ -298,8 +149,8 @@ $(document).ready(function() {
 
     // Click on next button
     $btnNext.click(function() {
-        if (counter >= commercials.length - 1) {
-            counter = commercials.length - 1;
+        if (counter >= contentArray.length - 1) {
+            counter = contentArray.length - 1;
             $btnNext.prop('disabled', true);
         } else {
             counter++;
