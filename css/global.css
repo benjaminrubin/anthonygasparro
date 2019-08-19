@@ -27,7 +27,7 @@ body {
 }
 
 .full-page {
-    height: max-content;
+    height: 100vh;
 }
 
 .full-page footer {
