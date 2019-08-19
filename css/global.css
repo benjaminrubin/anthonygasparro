@@ -89,6 +89,7 @@ hr {
 }
 
 footer {
+    cursor: default;
     text-align: center;
     font-weight: 400;
     color: gray;
