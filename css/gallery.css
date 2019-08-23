@@ -16,6 +16,12 @@
     padding-bottom: 1.5rem;
 }
 
+.stills-player-container {
+    max-width: 1200px;
+    margin: auto auto;
+    padding-bottom: 1.5rem;
+}
+
 .iframe-container {
     padding: 75% 0 0 0;
     position: relative;
@@ -40,6 +46,10 @@
     position: relative;
     outline: none;
     text-align: center;
+}
+
+.stills-button-group {
+    max-width: 1200px;
 }
 
 .button-group .btn {
@@ -93,6 +103,13 @@ button {
 }
 
 #video-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+#stills-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

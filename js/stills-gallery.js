@@ -1,18 +1,10 @@
 var counter;
 
-var contentArray = [{
-    title: "Certain Women",
-    thumbnailUrl: "thumb_a.png",
-    imageUrl: "https://player.vimeo.com/video/353812069?title=0&byline=0&portrait=0"
-}];
-
 $(document).ready(function() {
 
     // Populate the page with thumbnail cards of all the images
 
-
     for (i in contentArray) {
-        // console.log(item);
 
         var thumbnailCard = document.createElement("div");
         let thumbClasses = ['col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
@@ -27,7 +19,7 @@ $(document).ready(function() {
         var image = document.createElement("img");
         let imageClasses = ['bd-placeholder-img', 'card-img-top'];
         image.classList.add(...imageClasses);
-        image.src = "img/video_thumbnails/" + contentArray[i].thumbnailUrl;
+        image.src = contentArray[i].thumbnailUrl;
         image.alt = "thumbnail " + i;
 
         var cardBody = document.createElement("div");
@@ -37,8 +29,7 @@ $(document).ready(function() {
         var paragraph = document.createElement("p");
         let parClasses = ['card-text', 'text-center', 'mb-2', 'mt-1'];
         paragraph.classList.add(...parClasses);
-        paragraph.innerHTML = contentArray[i].title + "<br/>" + contentArray[i].subtitle;
-
+        paragraph.innerHTML = contentArray[i].title;
 
         cardBody.appendChild(paragraph);
         card.appendChild(image);
@@ -49,33 +40,25 @@ $(document).ready(function() {
     }
 
 
-
-
-
-    var $iframe = $("#iframe");
-    var $projectSubtitle = $("#projectSubtitle");
     var $projectTitle = $("#project-title");
-    var $iframeContainer = $(".iframe-container");
+    var $mainImage = $("#main-image");
     var $btnPrev = $("#btn-prev");
     var $btnNext = $("#btn-next");
     var $btnClose = $("#btn-close");
 
 
-    // Update video player to contain information relevant to thumbnail clicked
+    // Update gallery player to contain information relevant to thumbnail clicked
 
     function updatePlayer() {
 
-        // Replace vimeo link in iframe
-        $iframe.attr("src", contentArray[counter].videoUrl);
+        // // Replace image link
+        // $iframe.attr("src", contentArray[counter].videoUrl);
 
-        // Replace director name
-        $projectSubtitle.html(contentArray[counter].subtitle);
+        $mainImage.attr("src", contentArray[counter].imageUrl);
 
         // Replace project title
         $projectTitle.html(contentArray[counter].title);
 
-        // Update the padding of the player
-        $iframeContainer.attr("padding", contentArray[counter].padding);
 
     }
 
