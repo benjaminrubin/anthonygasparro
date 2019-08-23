@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 
     var $iframe = $("#iframe");
-    var $projectSubtitle = $("#projectSubtitle");
+    var $projectSubtitle = $("#project-subtitle");
     var $projectTitle = $("#project-title");
     var $iframeContainer = $(".iframe-container");
     var $btnPrev = $("#btn-prev");

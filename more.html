@@ -110,8 +110,8 @@
 
         <h2 class="mobile-header">+</h2>
 
-        <main class="container mt-5 col-xl-6 col-lg-7 col-md-10">
-            <img src="img/more/1-min.jpg" class="img-fluid mb-4" alt="Responsive image">
+        <main class="container col-xl-6 col-lg-7 col-md-10" id="more-gallery">
+            <!-- <img src="img/more/1-min.jpg" class="img-fluid mb-4" alt="Responsive image">
             <img src="img/more/2-min.jpg" class="img-fluid my-4" alt="Responsive image">
             <img src="img/more/3-min.jpeg" class="img-fluid my-4" alt="Responsive image">
             <img src="img/more/4-min.jpg" class="img-fluid my-4" alt="Responsive image">
@@ -119,7 +119,7 @@
             <img src="img/more/6-min.JPG" class="img-fluid my-4" alt="Responsive image">
             <img src="img/more/7-min.JPG" class="img-fluid my-4" alt="Responsive image">
             <img src="img/more/8-min.jpg" class="img-fluid my-4" alt="Responsive image">
-            <img src="img/more/9-min.jpeg" class="img-fluid my-4" alt="Responsive image">
+            <img src="img/more/9-min.jpeg" class="img-fluid my-4" alt="Responsive image"> -->
         </main>
 
         <!-- Footer -->
@@ -169,6 +169,34 @@
     <!-- JavaScript -->
     <script src="https://kit.fontawesome.com/c8182c373b.js"></script>
     <script src="js/global.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var $gallery = $("#more-gallery");
+
+            var $gallerySize = 60;
+
+            for (var i = 1; i <= $gallerySize; i++) {
+
+                // Create the img element
+                var image = document.createElement("img");
+
+                // Set the image's classes
+                let imageClasses = ['img-fluid', 'my-4']
+                image.classList.add(...imageClasses);
+
+                // Add an alt to the image for accessibility
+                image.setAttribute("alt", "Responsive image #" + i);
+
+
+                // Set the source of the image
+                image.src = "img/more/" + i + ".jpeg";
+
+                // Append the image to the gallery
+                $gallery.append(image);
+            }
+        });
+    </script>
 
     <!-- JavaScript -->
 
