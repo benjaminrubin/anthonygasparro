@@ -113,13 +113,6 @@ var commercials = [{
         padding: "56.25% 0 0 0",
     },
     {
-        title: "Audi",
-        subtitle: "dir. Stacy Wall",
-        thumbnailUrl: "thumb_17.png",
-        videoUrl: "https://player.vimeo.com/video/117690334?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
         title: "Air Jordan",
         subtitle: "dir. Stacy Wall",
         thumbnailUrl: "thumb_18.png",

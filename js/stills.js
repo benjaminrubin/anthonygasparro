@@ -26,7 +26,7 @@ var contentArray = [{
         imageUrl: "img/stills/5.jpeg"
     },
     {
-        title: "Nike dir. Kyrie Irving ",
+        title: "Nike",
         thumbnailUrl: "img/stills/thumbnails/6.jpeg",
         imageUrl: "img/stills/6.jpeg"
     },
