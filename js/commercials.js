@@ -38,19 +38,20 @@ var commercials = [{
         padding: "56.25% 0 0 0",
     },
     {
-        title: "Geico",
-        subtitle: "dir. Hank Perlman",
-        thumbnailUrl: "thumb_5.jpg",
-        videoUrl: "https://player.vimeo.com/video/266609122?title=0&byline=0&portrait=0",
-        padding: "56.25% 0 0 0",
-    },
-    {
         title: "Allstate",
         subtitle: "dir. Stacy Wall",
         thumbnailUrl: "thumb_6.jpg",
         videoUrl: "https://player.vimeo.com/video/125599908?title=0&byline=0&portrait=0",
         padding: "75% 0 0 0",
     },
+    {
+        title: "Geico",
+        subtitle: "dir. Hank Perlman",
+        thumbnailUrl: "thumb_5.jpg",
+        videoUrl: "https://player.vimeo.com/video/266609122?title=0&byline=0&portrait=0",
+        padding: "56.25% 0 0 0",
+    },
+
     {
         title: "NBA2K",
         subtitle: "dir. Stacy Wall",
