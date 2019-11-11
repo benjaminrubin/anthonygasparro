@@ -3,7 +3,7 @@
 var features = [{
     title: "Certain Women",
     subtitle: "dir. Kelly Reichardt",
-    thumbnailUrl: "thumb_a.png",
+    thumbnailUrl: "thumb_a.jpg",
     videoUrl: "https://player.vimeo.com/video/353812069?title=0&byline=0&portrait=0",
     padding: "56.25% 0 0 0",
 }];
