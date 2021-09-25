@@ -68,34 +68,41 @@ button {
 }
 
 #btn-close {
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: relative;
     /* cursor: pointer; */
 }
 
-#btn-close:hover {
-    cursor: pointer;
-    color: #319EFF;
-}
 
 #btn-close:active {
     color: white;
 }
 
-.player-btn:hover {
+.player-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: .22s;
 }
 
-.player-btn:hover g {
-    fill: #319EFF;
+.player-btn-container:hover {
+    background-color: rgb(191, 191, 191); 
 }
 
-.player-btn:active g {
+.player-btn-container:active .player-btn g {
     fill: white;
 }
 
+
+
 .player-btn-disabled {
     cursor: default !important;
+    opacity: 0;
+    transition: .33s;
 }
 
 .player-btn-disabled g {
