@@ -9,7 +9,7 @@ if (contentType == "commercials") {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Populate the page with thumbnail cards of all the videos
 
@@ -86,6 +86,10 @@ $(document).ready(function() {
 
     function updatePlayerButtons() {
 
+        // console.log("counter is", counter)
+        // console.log("content array length is", contentArray.length - 1)
+
+
         // If counter is set below or equal to zero
         if (counter == 0) {
             // Disable previous button
@@ -97,26 +101,35 @@ $(document).ready(function() {
                 // Disable the next button as well
                 $btnNext.addClass('player-btn-disabled');
             }
+            else {
+                $btnNext.removeClass('player-btn-disabled');
+            }
         }
 
         // If counter is equal to the size of contentArray array
         else if (counter == contentArray.length - 1) {
+
+
             $btnNext.addClass('player-btn-disabled');
+            $btnPrev.removeClass('player-btn-disabled');
 
         }
         // Enable all buttons
         else {
+
             $btnPrev.removeClass('player-btn-disabled');
             $btnNext.removeClass('player-btn-disabled');
         }
     }
 
     // Click on thumbnail
-    $(".card").click(function() {
+    $(".card").click(function () {
 
         counter = $(this).get(0).id;
         console.log("Counter is " + counter);
         console.log(contentArray[counter]);
+
+        console.log("content array length is", contentArray.length - 1)
 
         // Populate player with relevant information
         updatePlayer();
@@ -138,7 +151,7 @@ $(document).ready(function() {
 
 
     // Click on previous button
-    $btnPrev.click(function() {
+    $btnPrev.click(function () {
         if (counter <= 0) {
             counter = 0;
             //disable previous button
@@ -155,7 +168,7 @@ $(document).ready(function() {
     });
 
     // Click on next button
-    $btnNext.click(function() {
+    $btnNext.click(function () {
         if (counter >= contentArray.length - 1) {
             counter = contentArray.length - 1;
             $btnNext.prop('disabled', true);
@@ -169,7 +182,7 @@ $(document).ready(function() {
     });
 
     // Clicking on close button will close the video player
-    $btnClose.click(function() {
+    $btnClose.click(function () {
         $("#gallery-player-container").fadeOut(320);
 
         // And remove the vimeo link so the video stops playing
