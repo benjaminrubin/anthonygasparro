@@ -4,8 +4,8 @@ var contentArray;
 
 if (contentType == "commercials") {
     contentArray = commercials;
-} else if (contentType == "features") {
-    contentArray = features;
+} else if (contentType == "films") {
+    contentArray = films;
 }
 
 

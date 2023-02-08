@@ -26,7 +26,6 @@ main ul li {
 main > ul > li > a {
   text-decoration: none;
   color: black;
-  text-transform: uppercase;
   font-size: 2.5rem;
   /* transition: .32s; */
   padding: 0 0.3rem;
@@ -49,11 +48,11 @@ main > ul > li > a:hover {
 .aqua-strikethrough:hover {
   background: linear-gradient(
     0deg,
-    rgba(0, 255, 240, 0) 40%,
-    rgba(0, 255, 240, 1) 40%,
+    rgba(0, 255, 240, 0) 30%,
+    rgba(0, 255, 240, 1) 30%,
     
-    rgba(0, 255, 240, 1) 78%,
-    rgba(0, 255, 240, 0) 78%
+    rgba(0, 255, 240, 1) 60%,
+    rgba(0, 255, 240, 0) 60%
   );
 }
 
@@ -63,8 +62,6 @@ main a:hover {
 }
 
 div > a {
-  font-family: "Merriweather", serif;
-  text-transform: uppercase;
   color: black;
   font-size: 2rem;
 }
@@ -73,6 +70,7 @@ div > a {
 
 #contact-link {
   font-size: 1.75rem;
+  letter-spacing: .5px;
   transition: 0.32s;
   padding: 0 0.5rem;
   font-style: italic;
@@ -94,6 +92,11 @@ div > a {
   color: aqua;
 }
 
+.home-link {
+  font-family: 'Gantari', sans-serif;
+  letter-spacing: -2px;
+}
+
 .home-link-faded {
   color: #e2e2e2 !important;
 }
@@ -109,7 +112,6 @@ div > a {
   main > ul > li > a {
     text-decoration: none;
     color: black;
-    text-transform: uppercase;
     font-weight: 500;
     font-size: 5.25rem;
     letter-spacing: 2px;

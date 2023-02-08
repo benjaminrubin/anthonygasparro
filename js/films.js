@@ -1,6 +1,6 @@
-// Array containing info on all features:
+// Array containing info on all films:
 
-var features = [
+var films = [
     {
         title: "Showing Up",
         subtitle: "dir. Kelly Reichardt",
@@ -24,6 +24,6 @@ var features = [
     },
 ];
 
-var contentType = "features";
+var contentType = "films";
 
 
