@@ -117,7 +117,7 @@ div > a {
     letter-spacing: 2px;
   }
   main > div {
-    margin-top: 5rem;
+    margin-top: 3rem;
     flex-direction: row;
     align-items: center;
   }
