@@ -26,7 +26,7 @@ main ul li {
 main > ul > li > a {
   text-decoration: none;
   color: black;
-  font-size: 2.5rem;
+  font-size: 4rem;
   /* transition: .32s; */
   padding: 0 0.3rem;
 }
