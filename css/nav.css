@@ -3,6 +3,10 @@
     max-width: 480px;
 }
 
+.secondary-nav {
+    display: none;
+}
+
 .desktop-nav>ul {
     list-style: none;
     padding: 0;
@@ -48,6 +52,33 @@
     .desktop-nav {
         display: flex;
     }
+
+    .secondary-nav {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .secondary-nav a {
+        text-decoration: none;
+        color: gray;
+        text-transform: uppercase;
+    }
+
+    .secondary-nav a:hover {
+        color: black;
+    }
+
+    .selected-page-secondary {
+        color: black !important;
+        text-decoration: line-through !important;
+        text-decoration-color: turquoise !important;
+        text-decoration-thickness: .2rem !important;
+    }
+
     .mobile-header {
         display: none;
     }
