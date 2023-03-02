@@ -11,14 +11,14 @@ var commercials = [{
     },
     {
         title: "Cisco",
-        subtitle: "dir. Brian Beletic",
+        subtitle: "dir. Hugo Stenson",
         thumbnailUrl: "cisco_couch_thumbnail.png",
         videoUrl: "https://player.vimeo.com/video/699887669?title=0&byline=0&portrait=0",
         padding: "56.34% 0 0 0",
     },
     {
         title: "Budweiser",
-        subtitle: "dir. Brian Beletic",
+        subtitle: "dir. Chloé Zhao",
         thumbnailUrl: "budweiser_thumbnail.png",
         videoUrl: "https://player.vimeo.com/video/687464692?title=0&byline=0&portrait=0",
         padding: "56.34% 0 0 0",

@@ -56,7 +56,7 @@ var contentArray = [{
         imageUrl: "img/stills/11.jpeg"
     },
     {
-        title: "Ikea Set Facrication ",
+        title: "Ikea Set Fabrication ",
         thumbnailUrl: "img/stills/thumbnails/12.jpeg",
         imageUrl: "img/stills/12.jpeg"
     },
@@ -111,12 +111,12 @@ var contentArray = [{
         imageUrl: "img/stills/22.jpeg"
     },
     {
-        title: "ESPN Set before Modication ",
+        title: "ESPN Set before Modification",
         thumbnailUrl: "img/stills/thumbnails/23.jpeg",
         imageUrl: "img/stills/23.jpeg"
     },
     {
-        title: "ESPN Set after Modication ",
+        title: "ESPN Set after Modification",
         thumbnailUrl: "img/stills/thumbnails/24.jpeg",
         imageUrl: "img/stills/24.jpeg"
     },

@@ -5,7 +5,7 @@ var films = [
         title: "Showing Up",
         subtitle: "dir. Kelly Reichardt",
         thumbnailUrl: "showing_up.png",
-        videoUrl: "https://player.vimeo.com/video/796427640?title=0&byline=0&portrait=0",
+        videoUrl: "https://player.vimeo.com/video/789872622?title=0&byline=0&portrait=0",
         padding: "56.25% 0 0 0",
     },
     {

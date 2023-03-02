@@ -69,6 +69,7 @@ div > a {
 /* Contact Link */
 
 #contact-link {
+  font-family: 'Jost', sans-serif;
   font-size: 1.75rem;
   letter-spacing: .5px;
   transition: 0.32s;
@@ -86,16 +87,16 @@ div > a {
 
 #more-link {
   font-size: 3.5rem;
-  font-weight: 200;
-  /* font-family: 'Heebo', sans-serif; */
+  font-weight: bold;
   font-family: Helvetica, sans-serif;
   transition: 0.32s;
   color: aqua;
 }
 
 .home-link {
-  font-family: 'Gantari', sans-serif;
+  font-family: Helvetica, sans-serif;
   letter-spacing: -2px;
+  font-weight: 600;
   display: block;
   transform: translate(-32px, 0px);
 }
