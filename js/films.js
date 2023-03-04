@@ -2,6 +2,13 @@
 
 var films = [
     {
+        title: "And",
+        subtitle: "dir. Yorgos Lanthimos",
+        thumbnailUrl: "coming_soon-min.png",
+        // videoUrl: "https://player.vimeo.com/video/789872622?title=0&byline=0&portrait=0",
+        padding: "56.25% 0 0 0",
+    },
+    {
         title: "Showing Up",
         subtitle: "dir. Kelly Reichardt",
         thumbnailUrl: "showing_up.png",

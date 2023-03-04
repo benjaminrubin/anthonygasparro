@@ -28,7 +28,7 @@
 .desktop-nav>ul>li a {
     text-decoration: none;
     color: gray;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     /* font-weight: 600; */
 }
 
