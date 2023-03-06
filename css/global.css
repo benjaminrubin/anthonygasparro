@@ -7,7 +7,7 @@ html,
 body {
     position: relative;
     height: 100%;
-    font-family: 'Overpass', sans-serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 600;
     /* background-color: #f8f9fa; */
     color: black;
@@ -62,7 +62,7 @@ header h1 {
     letter-spacing: 0.5px;
     font-weight: bold;
     margin-bottom: .1rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
     transition: .32s;
     width: max-content;
 }
@@ -73,7 +73,7 @@ header h4 {
     font-family: 'Jost', sans-serif;
     font-style: italic;
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     transition: .32s;
     width: max-content;
 }
