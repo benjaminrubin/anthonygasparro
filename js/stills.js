@@ -2,7 +2,7 @@
 
 var contentArray = [
     {
-        title: "Audio ",
+        title: "Audi",
         thumbnailUrl: "img/stills/0.png",
         imageUrl: "img/stills/0.png"
     },
