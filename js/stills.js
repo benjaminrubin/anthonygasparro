@@ -1,6 +1,12 @@
 // Array containing info on all stills:
 
-var contentArray = [{
+var contentArray = [
+    {
+        title: "Audio ",
+        thumbnailUrl: "img/stills/0.png",
+        imageUrl: "img/stills/0.png"
+    },
+    {
         title: "Geico ",
         thumbnailUrl: "img/stills/thumbnails/1.jpeg",
         imageUrl: "img/stills/1.jpeg"
