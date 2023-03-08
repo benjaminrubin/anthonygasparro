@@ -58,7 +58,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Outline', sans-serif;
     /* letter-spacing: 0.5px; */
     font-weight: bold;
     margin-bottom: .1rem;
@@ -70,7 +70,7 @@ header h1 {
 header h4 {
     margin-top: 0;
     /* letter-spacing: 0.5px; */
-    font-family: 'Jost', sans-serif;
+    font-family: 'outline', sans-serif;
     font-style: italic;
     font-weight: bold;
     font-size: 1.5rem;
