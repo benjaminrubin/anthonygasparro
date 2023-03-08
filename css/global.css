@@ -58,9 +58,9 @@ header {
 }
 
 header h1 {
-    font-family: 'Outline', sans-serif;
+    font-family: 'Outfit', sans-serif;
     /* letter-spacing: 0.5px; */
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-bottom: .1rem;
     font-size: 2rem;
     transition: .32s;
@@ -70,9 +70,9 @@ header h1 {
 header h4 {
     margin-top: 0;
     /* letter-spacing: 0.5px; */
-    font-family: 'outline', sans-serif;
+    font-family: 'Outfit', sans-serif;
     /* font-style: italic; */
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.5rem;
     transition: .32s;
     width: max-content;

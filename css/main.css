@@ -69,14 +69,14 @@ div > a {
 /* Contact Link */
 
 #contact-link {
-  font-family: 'Outline', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.75rem;
   letter-spacing: .5px;
   transition: 0.32s;
   padding-right: 0.5rem;
   padding-left: 0px;
   /* font-style: italic; */
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 #contact-link:hover {
