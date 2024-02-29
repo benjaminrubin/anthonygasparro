@@ -2,7 +2,7 @@
 
 var films = [
     {
-        title: "And",
+        title: "Kind of Kindness",
         subtitle: "dir. Yorgos Lanthimos",
         thumbnailUrl: "coming_soon-min.png",
         // videoUrl: "https://player.vimeo.com/video/789872622?title=0&byline=0&portrait=0",
