@@ -2,9 +2,9 @@
 
 var films = [
     {
-        title: "Kind of Kindness",
+        title: "Kinds of Kindness",
         subtitle: "dir. Yorgos Lanthimos",
-        thumbnailUrl: "coming_soon-min.png",
+        thumbnailUrl: "kinds_of_kindness.png",
         // videoUrl: "https://player.vimeo.com/video/789872622?title=0&byline=0&portrait=0",
         padding: "56.25% 0 0 0",
     },
