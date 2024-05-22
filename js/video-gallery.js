@@ -23,7 +23,7 @@ $(document).ready(function () {
         thumbnailCard.classList.add(...thumbClasses);
 
         var card = document.createElement("div");
-        let cardClasses = ['card', 'mb-4', 'shadow-sm']
+        let cardClasses = ['card', 'mb-4', 'shadow-sm'];
         card.classList.add(...cardClasses);
         card.id = i;
 
@@ -33,15 +33,26 @@ $(document).ready(function () {
         image.src = "img/video_thumbnails/" + contentArray[i].thumbnailUrl;
         image.alt = "thumbnail " + i;
 
+        // Set data-second-thumbnail attribute if exists
+        if (contentArray[i].secondThumbnailUrl) {
+            image.setAttribute('data-second-thumbnail', "img/video_thumbnails/" + contentArray[i].secondThumbnailUrl);
+            image.addEventListener('mouseenter', function() {
+                this.dataset.originalSrc = this.src;
+                this.src = this.dataset.secondThumbnail;
+            });
+            image.addEventListener('mouseleave', function() {
+                this.src = this.dataset.originalSrc;
+            });
+        }
+
         var cardBody = document.createElement("div");
-        cardBodyClasses = ['card-body', 'p-0', 'py-1'];
+        let cardBodyClasses = ['card-body', 'p-0', 'py-1'];
         cardBody.classList.add(...cardBodyClasses);
 
         var paragraph = document.createElement("p");
         let parClasses = ['card-text', 'text-center', 'mb-2', 'mt-1'];
         paragraph.classList.add(...parClasses);
         paragraph.innerHTML = contentArray[i].title + "<br/>" + contentArray[i].subtitle;
-
 
         cardBody.appendChild(paragraph);
         card.appendChild(image);
