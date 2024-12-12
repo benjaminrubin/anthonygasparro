@@ -2,6 +2,20 @@
 
 var films = [
     {
+        title: "",
+        subtitle: "",
+        thumbnailUrl: "the_mastermind_comingsoon.webp",
+        videoUrl: "",
+        padding: "56.25% 0 0 0",
+    },
+    {
+        title: "",
+        subtitle: "",
+        thumbnailUrl: "materialists_comingsoon.webp",
+        videoUrl: "",
+        padding: "56.25% 0 0 0",
+    },
+    {
         title: "Kinds of Kindness",
         subtitle: "dir. Yorgos Lanthimos",
         thumbnailUrl: "kinds_of_kindness.png",
