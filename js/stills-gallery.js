@@ -1,33 +1,29 @@
-var counter;
+let counter;
 
 $(document).ready(function() {
-
     // Populate the page with thumbnail cards of all the images
-
-    for (i in contentArray) {
-
-        var thumbnailCard = document.createElement("div");
-        let thumbClasses = ['col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
-
+    for (let i = 0; i < contentArray.length; i++) {
+        const thumbnailCard = document.createElement('div');
+        const thumbClasses = ['col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
         thumbnailCard.classList.add(...thumbClasses);
 
-        var card = document.createElement("div");
-        let cardClasses = ['card', 'mb-4', 'shadow-sm']
+        const card = document.createElement('div');
+        const cardClasses = ['card', 'mb-4', 'shadow-sm'];
         card.classList.add(...cardClasses);
         card.id = i;
 
-        var image = document.createElement("img");
-        let imageClasses = ['bd-placeholder-img', 'card-img-top'];
+        const image = document.createElement('img');
+        const imageClasses = ['bd-placeholder-img', 'card-img-top'];
         image.classList.add(...imageClasses);
         image.src = contentArray[i].thumbnailUrl;
-        image.alt = "thumbnail " + i;
+        image.alt = `thumbnail ${i}`;
 
-        var cardBody = document.createElement("div");
-        cardBodyClasses = ['card-body', 'p-0', 'py-1'];
+        const cardBody = document.createElement('div');
+        const cardBodyClasses = ['card-body', 'p-0', 'py-1'];
         cardBody.classList.add(...cardBodyClasses);
 
-        var paragraph = document.createElement("p");
-        let parClasses = ['card-text', 'text-center', 'mb-2', 'mt-1'];
+        const paragraph = document.createElement('p');
+        const parClasses = ['card-text', 'text-center', 'mb-2', 'mt-1'];
         paragraph.classList.add(...parClasses);
         paragraph.innerHTML = contentArray[i].title;
 
@@ -35,103 +31,65 @@ $(document).ready(function() {
         card.appendChild(image);
         card.appendChild(cardBody);
         thumbnailCard.appendChild(card);
-        document.getElementById("stills-gallery").appendChild(thumbnailCard);
-        i++;
+        document.getElementById('stills-gallery').appendChild(thumbnailCard);
     }
 
-
-    var $projectTitle = $("#project-title");
-    var $mainImage = $("#main-image");
-    var $btnPrev = $("#btn-prev");
-    var $btnNext = $("#btn-next");
-    var $btnClose = $("#btn-close");
-
+    const $projectTitle = $('#project-title');
+    const $mainImage = $('#main-image');
+    const $btnPrev = $('#btn-prev');
+    const $btnNext = $('#btn-next');
+    const $btnClose = $('#btn-close');
 
     // Update gallery player to contain information relevant to thumbnail clicked
-
     function updatePlayer() {
-
-        // // Replace image link
-        // $iframe.attr("src", contentArray[counter].videoUrl);
-
-        $mainImage.attr("src", contentArray[counter].imageUrl);
-
-        // Replace project title
+        $mainImage.attr('src', contentArray[counter].imageUrl);
         $projectTitle.html(contentArray[counter].title);
-
-
     }
 
     // Disable previous button or next button when at the edges of the contentArray array
-
     function updatePlayerButtons() {
-
-        // If counter is set below or equal to zero
-        if (counter == 0) {
-            // Disable previous button
+        if (counter === 0) {
             $btnPrev.addClass('player-btn-disabled');
-
-            // If the size of the content array is only 1
-            if (contentArray.length == 1) {
-
-                // Disable the next button as well
+            if (contentArray.length === 1) {
                 $btnNext.addClass('player-btn-disabled');
             }
-        }
-
-        // If counter is equal to the size of contentArray array
-        else if (counter == contentArray.length - 1) {
+        } else if (counter === contentArray.length - 1) {
             $btnNext.addClass('player-btn-disabled');
-
-        }
-        // Enable all buttons
-        else {
+        } else {
             $btnPrev.removeClass('player-btn-disabled');
             $btnNext.removeClass('player-btn-disabled');
         }
     }
 
     // Click on thumbnail
-    $(".card").click(function() {
-
+    $('.card').click(function() {
         counter = $(this).get(0).id;
-        console.log("Counter is " + counter);
+        console.log(`Counter is ${counter}`);
         console.log(contentArray[counter]);
 
-        // Populate player with relevant information
         updatePlayer();
-
-        // Update the display of the buttons
         updatePlayerButtons();
 
-        // Fade in the gallery if not displayed
-        if ($("#gallery-player-container").css('display') == "none") {
-            $("#gallery-player-container").fadeIn(320);
+        if ($('#gallery-player-container').css('display') === 'none') {
+            $('#gallery-player-container').fadeIn(320);
         }
 
-        // Jump to the top of the page
         $('html, body').animate({
-            scrollTop: $("#gallery-player-container").offset().top - 20
+            scrollTop: $('#gallery-player-container').offset().top - 20
         }, -200);
-
     });
-
 
     // Click on previous button
     $btnPrev.click(function() {
         if (counter <= 0) {
             counter = 0;
-            //disable previous button
             $btnPrev.prop('disabled', true);
-
         } else {
             counter--;
             $btnNext.prop('disabled', false);
             updatePlayer();
         }
-
         updatePlayerButtons();
-
     });
 
     // Click on next button
@@ -144,17 +102,11 @@ $(document).ready(function() {
             $btnPrev.prop('disabled', false);
             updatePlayer();
         }
-
         updatePlayerButtons();
     });
 
     // Clicking on close button will close the video player
     $btnClose.click(function() {
-        $("#gallery-player-container").fadeOut(320);
-
-        // And remove the vimeo link so the video stops playing
-        $iframe.attr("src", "");
+        $('#gallery-player-container').fadeOut(320);
     });
-
-
 });

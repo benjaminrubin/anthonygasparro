@@ -69,14 +69,11 @@ div > a {
 /* Contact Link */
 
 #contact-link {
-  font-family: 'Outfit', sans-serif;
   font-size: 1.75rem;
   letter-spacing: .5px;
   transition: 0.32s;
   padding-right: 0.5rem;
   padding-left: 0px;
-  /* font-style: italic; */
-  /* font-weight: bold; */
 }
 
 #contact-link:hover {
@@ -94,7 +91,6 @@ div > a {
 }
 
 .home-link {
-  font-family: Helvetica, sans-serif;
   letter-spacing: -2px;
   font-weight: 600;
   display: block;
@@ -137,4 +133,11 @@ div > a {
   #more-link {
     font-size: 6.5rem;
   }
+}
+
+/* Header Title */
+.header-title {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: 400;
 }
