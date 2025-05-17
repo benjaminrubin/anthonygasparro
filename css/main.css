@@ -135,9 +135,3 @@ div > a {
   }
 }
 
-/* Header Title */
-.header-title {
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-}
