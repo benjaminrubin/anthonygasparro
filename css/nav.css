@@ -110,7 +110,7 @@
 
 .menu-toggle:hover {
     background: #343a40;
-    cursor: pointer !important;
+    /* cursor: pointer !important; */
 }
 
 #sidebar-wrapper {
@@ -186,7 +186,7 @@
     color: white !important;
     background: rgba(52, 58, 64, 0.5);
     line-height: 45px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .scroll-to-top:focus,

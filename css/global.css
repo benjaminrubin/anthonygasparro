@@ -4,183 +4,221 @@
 /* Base styles */
 html,
 body {
-    position: relative;
-    height: 100%;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    color: black;
-    background-color: white;
-    font-size: 12px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  font-size: 12px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom cursor styles - will be enabled by JS only on desktop */
+.custom-cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease-out;
+  mix-blend-mode: exclusion;
+  transform-origin: center;
+  display: none; /* Hide by default, JS will show if desktop */
+}
+
+/* The expanded state when hovering links */
+.custom-cursor.expanded {
+  transform: scale(2);
+}
+
+/* We'll apply this class to the html element when custom cursor is active to catch ALL elements */
+html.custom-cursor-enabled,
+html.custom-cursor-enabled *,
+html.custom-cursor-enabled *::before,
+html.custom-cursor-enabled *::after {
+  cursor: none !important;
+}
+
+/* Explicitly ensure links don't show the pointer when cursor is enabled */
+html.custom-cursor-enabled a,
+html.custom-cursor-enabled a:hover,
+html.custom-cursor-enabled a:visited,
+html.custom-cursor-enabled a:active {
+  cursor: none !important;
+}
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Layout */
 .full-page {
-    height: 100vh;
+  height: 100vh;
 }
 
 .full-page footer {
-    position: absolute;
-    bottom: 10px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* Typography */
 header {
-    cursor: default;
+  /* cursor: default; */
 }
 
-
 header h1 {
-    composes: noto-serif-italic;
-    letter-spacing: -0.5px;
-    margin-bottom: -5px;
-    font-size: 2rem;
-    transition: .32s;
-    width: max-content;
+  composes: noto-serif-italic;
+  letter-spacing: -0.5px;
+  margin-bottom: -5px;
+  font-size: 2rem;
+  transition: 0.32s;
+  width: max-content;
 }
 
 header h4 {
-    composes: outfit-medium;
-    margin-top: 0;
-    letter-spacing: -0.5px;
-    font-size: 1.5rem;
-    transition: .32s;
-    width: max-content;
+  composes: outfit-medium;
+  margin-top: 0;
+  letter-spacing: -0.5px;
+  font-size: 1.5rem;
+  transition: 0.32s;
+  width: max-content;
 }
 
 h2 {
-    composes: outfit-semibold;
-    font-size: 1.1rem;
+  composes: outfit-semibold;
+  font-size: 1.1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    composes: outfit-regular;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  composes: outfit-regular;
 }
 
 p {
-    margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 /* Header styles */
 .header-title {
-    font-family: "Noto Serif", serif;
+  font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
-  font-variation-settings:
-    "wdth" 100;
-    font-size: 2.48rem;
-    text-transform: uppercase;
+  font-variation-settings: "wdth" 100;
+  font-size: 2.48rem;
+  text-transform: uppercase;
 }
 
 .header-subtitle {
-    composes: outfit-medium;
-    font-size: 1.85rem;
+  composes: outfit-medium;
+  font-size: 1.85rem;
 }
 
 .mobile-header {
-    font-size: 1.1rem;
-    font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 /* Footer */
 footer {
-    cursor: default;
-    text-align: center;
-    font-weight: 400;
-    color: gray;
-    bottom: 10px;
-    width: 100%;
+  /* cursor: default; */
+  text-align: center;
+  font-weight: 400;
+  color: gray;
+  bottom: 10px;
+  width: 100%;
 }
 
 /* Links and interactive elements */
 #branja-url {
-    color: gray;
+  color: gray;
 }
 
 #branja-logo {
-    filter: grayscale(100%);
-    transition: .12s;
-    position: relative;
-    left: 2px;
-    width: 1.3rem;
-    height: 1.3rem;
+  filter: grayscale(100%);
+  transition: 0.12s;
+  position: relative;
+  left: 2px;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 #branja-url:hover #branja-logo {
-    filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 /* Components */
 .card {
-    border: none;
+  border: none;
 }
 
 hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Images */
 #wme-logo {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 #main-image {
-    max-height: 90vh;
+  max-height: 90vh;
 }
 
 /* Media Queries */
 @media (min-width: 767px) {
-    html,
-    body {
-        font-size: 14px;
-    }
+  html,
+  body {
+    font-size: 14px;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    h2 {
-        font-size: 1.6rem;
-    }
+  h2 {
+    font-size: 1.6rem;
+  }
 
-    h4 {
-        font-size: 1.5rem;
-    }
+  h4 {
+    font-size: 1.5rem;
+  }
 
-    footer p {
-        font-size: .85rem;
-    }
+  footer p {
+    font-size: 0.85rem;
+  }
 
-    #branja-logo {
-        width: 1.675rem;
-        height: 1.675rem;
-    }
+  #branja-logo {
+    width: 1.675rem;
+    height: 1.675rem;
+  }
 }
 
 /* Links */
 #contact-link {
-    font-family: "Noto Serif", serif;
+  font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-style: italic;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
