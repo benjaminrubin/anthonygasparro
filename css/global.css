@@ -127,7 +127,7 @@ p {
 
 .header-subtitle {
   composes: outfit-medium;
-  font-size: 1.85rem;
+  font-size: 1.90rem;
 }
 
 .mobile-header {
@@ -232,7 +232,3 @@ hr {
   width: 100%;
 }
 
-#more-link {
-  text-align: right;
-  padding-right: 2rem;
-}
