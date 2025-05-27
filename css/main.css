@@ -4,7 +4,6 @@ main ul {
   /* text-align: center;     */
   padding: 0;
   padding-top: 3rem;
-  line-height: 4rem;
   margin: auto auto;
 }
 
@@ -18,31 +17,13 @@ main > div {
 }
 
 main ul li {
-  padding-bottom: 1rem;
 }
 
 /* Commercials and Stills links */
 
-main > ul > li > a {
-  text-decoration: none;
-  color: black;
-  font-size: 3.85rem;
-  /* transition: .32s; */
-  padding: 0 0.3rem;
-}
-
-main > ul > li > a:hover {
-  /* rgba(0,255,240,1) 0%, rgba(0,255,240,1) 100% */
-  /* color: aqua; */
-  /* text-decoration: line-through;
-    text-decoration-thickness: 10px;
-    text-decoration-color: aqua; */
-  /* background-color: aqua; */
-}
-
 .aqua-strikethrough {
-    padding-left: 30px;
-    padding-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .aqua-strikethrough:hover {
@@ -50,7 +31,7 @@ main > ul > li > a:hover {
     0deg,
     rgba(0, 255, 240, 0) 30%,
     rgba(0, 255, 240, 1) 30%,
-    
+
     rgba(0, 255, 240, 1) 60%,
     rgba(0, 255, 240, 0) 60%
   );
@@ -70,7 +51,7 @@ div > a {
 
 #contact-link {
   font-size: 1.75rem;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   transition: 0.32s;
   padding-right: 0.5rem;
   padding-left: 0px;
@@ -93,10 +74,15 @@ div > a {
 }
 
 .home-link {
-  letter-spacing: -2px;
+  font-size: 2rem;
+  letter-spacing: -1px;
   font-weight: 600;
   display: block;
   transform: translate(-32px, 0px);
+  text-decoration: none;
+  color: black;
+  /* transition: .32s; */
+  padding: 0 0.3rem;
 }
 
 .home-link-faded {
@@ -109,23 +95,22 @@ div > a {
 
 @media (min-width: 600px) {
   main ul {
-    line-height: 7rem;
+    line-height: 5rem;
   }
 
   .home-link {
     transform: translate(-38px, 0px);
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 6.75rem;
+    letter-spacing: -2px;
   }
 
   main ul li {
     padding-bottom: 2rem;
   }
-  main > ul > li > a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 6.75rem;
-    letter-spacing: 2px;
-  }
+
   main > div {
     margin-left: 0px;
     margin-top: 2rem;
@@ -136,4 +121,3 @@ div > a {
     font-size: 6.5rem;
   }
 }
-
