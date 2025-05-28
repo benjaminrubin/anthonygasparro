@@ -8,24 +8,24 @@ const commercials = [
         padding: '56.25% 0 0 0'
     },
     {
-        title: 'Cisco',
-        subtitle: 'dir. Hugo Stenson',
-        thumbnailUrl: 'cisco_couch_thumbnail.png',
-        videoUrl: 'https://player.vimeo.com/video/699887669?title=0&byline=0&portrait=0',
+        title: 'Hyundai',
+        subtitle: 'dir. Gui Borchert',
+        thumbnailUrl: 'hyundai_thumbnail.png',
+        videoUrl: 'https://player.vimeo.com/video/1083174598?title=0&byline=0&portrait=0',
         padding: '56.34% 0 0 0'
     },
     {
-        title: 'Budweiser',
-        subtitle: 'dir. Chloé Zhao',
-        thumbnailUrl: 'budweiser_thumbnail.png',
-        videoUrl: 'https://player.vimeo.com/video/687464692?title=0&byline=0&portrait=0',
+        title: 'Wells Fargo',
+        subtitle: 'dir. Aaron Stoller',
+        thumbnailUrl: 'wells_fargo_thumbnail.png',
+        videoUrl: 'https://player.vimeo.com/video/1083174050?title=0&byline=0&portrait=0',
         padding: '56.34% 0 0 0'
     },
     {
-        title: 'Tide',
-        subtitle: 'dir. Matt Smuckler',
-        thumbnailUrl: 'thumb_15.jpg',
-        videoUrl: 'https://player.vimeo.com/video/125708809?title=0&byline=0&portrait=0',
+        title: 'Open Kitchen',
+        subtitle: 'dir. Errol Morris',
+        thumbnailUrl: 'open_kitchen_thumbnail.png',
+        videoUrl: 'https://player.vimeo.com/video/1083201505?title=0&byline=0&portrait=0',
         padding: '56.25% 0 0 0'
     },
     {
