@@ -130,6 +130,40 @@ p {
   font-size: 1.90rem;
 }
 
+/* Secondary page header styles */
+.secondary-header-title {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.secondary-header-subtitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#nav-title {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+/* Secondary page header styles */
+#nav-subtitle {
+  composes: outfit-medium;
+  text-transform: uppercase;
+}
+
+
 .mobile-header {
   font-size: 1.1rem;
   font-weight: 600;
@@ -232,3 +266,19 @@ hr {
   width: 100%;
 }
 
+/* Sidebar Navigation */
+.sidebar-nav .sidebar-brand {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.sidebar-nav .text-secondary {
+  color: black !important;
+}
+
+.sidebar-nav > li:first-child {
+  line-height: 1rem;
+}
