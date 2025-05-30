@@ -46,7 +46,6 @@
 .mobile-header {
     display: block;
     text-align: center;
-    text-transform: uppercase;
 }
 
 @media (min-width: 767px) {
