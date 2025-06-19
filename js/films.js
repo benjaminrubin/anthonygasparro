@@ -8,10 +8,10 @@ const films = [
         padding: "56.25% 0 0 0",
     },
     {
-        title: "",
-        subtitle: "",
-        thumbnailUrl: "materialists_comingsoon.webp",
-        videoUrl: "",
+        title: "Materialists",
+        subtitle: "Errol Morris",
+        thumbnailUrl: "materialists_poster.webp",
+        videoUrl: "https://player.vimeo.com/video/1083217344?title=0&byline=0&portrait=0",
         padding: "56.25% 0 0 0",
     },
     {
