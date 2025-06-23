@@ -11,7 +11,7 @@ $(document).ready(function() {
     // Populate the page with thumbnail cards of all the videos
     for (let i = 0; i < contentArray.length; i++) {
         const thumbnailCard = document.createElement('div');
-        const thumbClasses = ['col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card'];
+        const thumbClasses = ['col-sm-12', 'col-md-6', 'col-lg-4', 'thumbnail-card', ];
         thumbnailCard.classList.add(...thumbClasses);
 
         const card = document.createElement('div');

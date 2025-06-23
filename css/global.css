@@ -16,6 +16,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
 /* Custom cursor styles - will be enabled by JS only on desktop */
 .custom-cursor {
   position: fixed;
@@ -57,6 +60,8 @@ html.custom-cursor-enabled a:active {
   box-sizing: border-box;
 }
 
+
+
 /* Layout */
 .full-page {
   height: 100vh;
@@ -71,6 +76,8 @@ html.custom-cursor-enabled a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2rem 3rem;
+  
 }
 
 /* Typography */
@@ -91,7 +98,6 @@ header h4 {
   composes: outfit-medium;
   margin-top: 0;
   letter-spacing: -0.5px;
-  font-size: 1.5rem;
   transition: 0.32s;
   width: max-content;
 }
@@ -153,7 +159,7 @@ p {
   font-weight: 500;
   font-style: italic;
   font-variation-settings: "wdth" 100;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -161,6 +167,8 @@ p {
 #nav-subtitle {
   composes: outfit-medium;
   text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: .2rem;
 }
 
 
@@ -200,6 +208,10 @@ footer {
 /* Components */
 .card {
   border: none;
+}
+
+.thumbnail-card {
+  padding: 0;
 }
 
 hr {
@@ -245,6 +257,28 @@ hr {
   #branja-logo {
     width: 1.675rem;
     height: 1.675rem;
+  }
+
+  #nav-title {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  
+  /* Secondary page header styles */
+  #nav-subtitle {
+    composes: outfit-medium;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  .thumbnail-card {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
