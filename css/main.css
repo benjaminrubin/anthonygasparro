@@ -27,17 +27,6 @@ main ul li {
   padding-right: 30px;
 }
 
-.aqua-strikethrough:hover {
-  background: linear-gradient(
-    0deg,
-    rgba(0, 255, 240, 0) 30%,
-    rgba(0, 255, 240, 1) 30%,
-
-    rgba(0, 255, 240, 1) 60%,
-    rgba(0, 255, 240, 0) 60%
-  );
-}
-
 main a:hover {
   color: black;
   text-decoration: none;
@@ -86,12 +75,17 @@ div > a {
   padding: 0 0.3rem;
 }
 
+.home-link:hover {
+  transform: translate(-32px, 0px) skewX(-13deg);
+  transform-origin: left bottom;
+}
+
 .home-link-faded {
   color: #e2e2e2 !important;
 }
 
 #more-link:hover {
-  color: #f6c2bf;
+  color: #4caf4f;
 }
 
 @media (min-width: 600px) {
@@ -106,6 +100,11 @@ div > a {
     font-weight: 500;
     font-size: 6.75rem;
     letter-spacing: -2px;
+  }
+
+  .home-link:hover {
+    transform: translate(-38px, 0px) skewX(-13deg);
+    transform-origin: left bottom;
   }
 
   main ul li {

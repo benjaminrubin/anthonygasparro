@@ -31,16 +31,20 @@
     font-family: Helvetica, sans-serif;
     /* text-transform: uppercase; */
     /* font-weight: 600; */
+    display: inline-block;
+    padding-bottom: .6rem;
 }
 
 .desktop-nav>ul>li a:hover {
-    color: black;
+    -webkit-transform: skewX(-13deg) !important;
+    -moz-transform: skewX(-13deg) !important;
+    -ms-transform: skewX(-13deg) !important;
+    transform: skewX(-13deg) !important;
+    transform-origin: left bottom;
 }
 
-.selected-page {
-    color: turquoise !important;
-    padding-bottom: .6rem;
-    border-bottom: 0.5px solid turquoise;
+.desktop-nav .selected-page {
+    color: black !important;
 }
 
 .mobile-header {

@@ -127,10 +127,8 @@ button {
     transition: .32s;
 }
 
-.card:hover {
-    -webkit-box-shadow: 0px 3px 18px -3px rgba(0, 0, 0, 0.43) !important;
-    box-shadow: 0px 3px 18px -3px rgba(0, 0, 0, 0.43) !important;
-    /* cursor: pointer !important; */
+.thumbnail-card {
+    cursor: pointer;
 }
 
 img {

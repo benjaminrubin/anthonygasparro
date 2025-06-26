@@ -15,7 +15,7 @@ $(document).ready(function() {
         thumbnailCard.classList.add(...thumbClasses);
 
         const card = document.createElement('div');
-        const cardClasses = ['card', 'mb-4', 'shadow-sm'];
+        const cardClasses = ['card', 'mb-4'];
         card.classList.add(...cardClasses);
         card.id = i;
 

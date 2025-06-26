@@ -22,7 +22,7 @@ const commercials = [
         padding: '56.34% 0 0 0'
     },
     {
-        title: 'Open Kitchen',
+        title: 'Chipotle',
         subtitle: 'dir. Errol Morris',
         thumbnailUrl: 'open_kitchen_thumbnail.png',
         videoUrl: 'https://player.vimeo.com/video/1083201505?title=0&byline=0&portrait=0',
