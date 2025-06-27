@@ -3,7 +3,7 @@ main ul {
   list-style: none;
   /* text-align: center;     */
   padding: 0;
-  padding-top: 1.8rem;
+  padding-top: .2rem;
   margin: auto auto;
   line-height: 1.3;
 }
@@ -17,8 +17,6 @@ main > div {
   justify-content: space-between;
 }
 
-main ul li {
-}
 
 /* Commercials and Stills links */
 
@@ -58,7 +56,7 @@ div > a {
   font-family: sans-serif;
   font-weight: 100;
   transition: 0.32s;
-  color: aqua;
+  color: #4caf4f;
   text-align: right;
   padding-right: 2rem;
 }
@@ -85,7 +83,7 @@ div > a {
 }
 
 #more-link:hover {
-  color: #4caf4f;
+  /* No color change on hover */
 }
 
 @media (min-width: 600px) {
@@ -123,5 +121,10 @@ div > a {
 
   main ul {
     padding-top: 3rem;
+  }
+
+  .bottom-links {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
