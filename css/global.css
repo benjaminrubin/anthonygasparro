@@ -76,15 +76,17 @@ html.custom-cursor-enabled a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 2rem 1rem;
   padding-left: 1rem;
-  
 }
 
-/* Typography */
-header {
-  /* cursor: default; */
+.home-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 3rem 2rem 3rem;
 }
+
 
 header h1 {
   composes: noto-serif-italic;
@@ -297,6 +299,12 @@ hr {
   /* Secondary page header styles */
   .secondary-header-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-container {
+    padding-left: 3rem;
   }
 }
 
