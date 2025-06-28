@@ -1,8 +1,8 @@
 // Array containing info on all films:
 const films = [
     {
-        title: "",
-        subtitle: "",
+        title: "Kelly Riechardt",
+        subtitle: "The Mastermind",
         thumbnailUrl: "the_mastermind_comingsoon.webp",
         videoUrl: "",
         padding: "56.25% 0 0 0",

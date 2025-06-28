@@ -84,7 +84,7 @@ html.custom-cursor-enabled a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem 3rem 2rem 3rem;
+  padding: 3rem 3rem 1.5rem 3rem;
 }
 
 
@@ -123,22 +123,6 @@ p {
   margin-bottom: 0.4rem;
 }
 
-/* Header styles */
-.header-title {
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: italic;
-  font-variation-settings: "wdth" 100;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-.header-subtitle {
-  composes: outfit-medium;
-  font-size: 1rem;
-  margin-top: .2rem;
-}
 
 /* Secondary page header styles */
 .secondary-header-title {
@@ -173,7 +157,7 @@ p {
 #nav-subtitle {
   composes: outfit-medium;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: .92rem;
   margin-top: .2rem;
 }
 
@@ -288,13 +272,7 @@ hr {
     padding-right: 15px;
   }
 
-  .header-title {
-    font-size: 2.48rem;
-  }
   
-  .header-subtitle {
-    font-size: 1.9rem;
-  }
 
   /* Secondary page header styles */
   .secondary-header-title {
