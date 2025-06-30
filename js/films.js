@@ -2,7 +2,7 @@
 const films = [
     {
         title: "The Mastermind",
-        subtitle: "Kelly Riechardt",
+        subtitle: "Kelly Reichardt",
         thumbnailUrl: "the_mastermind_comingsoon.webp",
         videoUrl: "",
         padding: "56.25% 0 0 0",
