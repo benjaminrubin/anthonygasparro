@@ -3,8 +3,8 @@ const films = [
     {
         title: "The Mastermind",
         subtitle: "Kelly Reichardt",
-        thumbnailUrl: "the_mastermind_comingsoon.webp",
-        videoUrl: "",
+        thumbnailUrl: "the_mastermind.webp",
+        videoUrl: "https://player.vimeo.com/video/1113419503?title=0&byline=0&portrait=0",
         padding: "56.25% 0 0 0",
     },
     {
