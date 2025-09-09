@@ -149,6 +149,47 @@ div > a {
   /* No color change on hover */
 }
 
+/* Mobile view - increase all elements by 50% */
+@media (max-width: 599px) {
+  /* Header elements - increase by 50% */
+  body.full-page .header-title {
+    font-size: 1.8rem; /* 1.2rem * 1.5 */
+  }
+
+  body.full-page .header-subtitle {
+    font-size: 1.395rem; /* 0.93rem * 1.5 */
+  }
+
+  body.full-page header h1 {
+    font-size: 3rem; /* 2rem * 1.5 */
+  }
+
+  body.full-page header h4 {
+    font-size: 2.25rem; /* 1.5rem * 1.5 */
+  }
+
+  /* Remaining elements - increase by 50% */
+  body.full-page .home-link {
+    font-size: 1.92rem; /* 1.28rem * 1.5 */
+  }
+
+  body.full-page div > a {
+    font-size: 1.92rem; /* 1.28rem * 1.5 */
+  }
+
+  body.full-page #contact-link {
+    font-size: 1.248rem; /* 0.832rem * 1.5 */
+  }
+
+  body.full-page #more-link {
+    font-size: 3.36rem; /* 2.24rem * 1.5 */
+  }
+
+  body.full-page footer p {
+    font-size: 0.816rem; /* 0.544rem * 1.5 */
+  }
+}
+
 @media (min-width: 600px) {
   .bottom-links {
     margin-top: 4.5rem;
