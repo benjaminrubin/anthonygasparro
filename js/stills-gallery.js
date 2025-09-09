@@ -38,7 +38,10 @@ $(document).ready(function() {
     const $mainImage = $('#main-image');
     const $btnPrev = $('#btn-prev');
     const $btnNext = $('#btn-next');
+    const $btnPrevMobile = $('#btn-prev-mobile');
+    const $btnNextMobile = $('#btn-next-mobile');
     const $btnClose = $('#btn-close');
+    const $btnCloseMobile = $('#btn-close-mobile');
 
     // Update gallery player to contain information relevant to thumbnail clicked
     function updatePlayer() {
@@ -50,14 +53,19 @@ $(document).ready(function() {
     function updatePlayerButtons() {
         if (counter === 0) {
             $btnPrev.addClass('player-btn-disabled');
+            $btnPrevMobile.addClass('player-btn-disabled');
             if (contentArray.length === 1) {
                 $btnNext.addClass('player-btn-disabled');
+                $btnNextMobile.addClass('player-btn-disabled');
             }
         } else if (counter === contentArray.length - 1) {
             $btnNext.addClass('player-btn-disabled');
+            $btnNextMobile.addClass('player-btn-disabled');
         } else {
             $btnPrev.removeClass('player-btn-disabled');
             $btnNext.removeClass('player-btn-disabled');
+            $btnPrevMobile.removeClass('player-btn-disabled');
+            $btnNextMobile.removeClass('player-btn-disabled');
         }
     }
 
@@ -108,5 +116,40 @@ $(document).ready(function() {
     // Clicking on close button will close the video player
     $btnClose.click(function() {
         $('#gallery-player-container').fadeOut(320);
+    });
+
+    // Clicking on mobile close button will close the video player
+    $btnCloseMobile.click(function() {
+        $('#gallery-player-container').fadeOut(320);
+    });
+
+    // Mobile navigation button event listeners
+    $btnPrevMobile.click(function() {
+        if (counter <= 0) {
+            counter = 0;
+            //disable previous button
+            $btnPrev.prop('disabled', true);
+            $btnPrevMobile.prop('disabled', true);
+        } else {
+            counter--;
+            $btnNext.prop('disabled', false);
+            $btnNextMobile.prop('disabled', false);
+            updatePlayer();
+        }
+        updatePlayerButtons();
+    });
+
+    $btnNextMobile.click(function() {
+        if (counter >= contentArray.length - 1) {
+            counter = contentArray.length - 1;
+            $btnNext.prop('disabled', true);
+            $btnNextMobile.prop('disabled', true);
+        } else {
+            counter++;
+            $btnPrev.prop('disabled', false);
+            $btnPrevMobile.prop('disabled', false);
+            updatePlayer();
+        }
+        updatePlayerButtons();
     });
 });

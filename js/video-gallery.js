@@ -59,7 +59,10 @@ $(document).ready(function() {
     const $iframeContainer = $('.iframe-container');
     const $btnPrev = $('#btn-prev');
     const $btnNext = $('#btn-next');
+    const $btnPrevMobile = $('#btn-prev-mobile');
+    const $btnNextMobile = $('#btn-next-mobile');
     const $btnClose = $('#btn-close');
+    const $btnCloseMobile = $('#btn-close-mobile');
 
     // Update video player to contain information relevant to thumbnail clicked
     function updatePlayer() {
@@ -159,5 +162,42 @@ $(document).ready(function() {
         $('#gallery-player-container').fadeOut(320);
         // And remove the vimeo link so the video stops playing
         $iframe.attr('src', '');
+    });
+
+    // Clicking on mobile close button will close the video player
+    $btnCloseMobile.click(function() {
+        $('#gallery-player-container').fadeOut(320);
+        // And remove the vimeo link so the video stops playing
+        $iframe.attr('src', '');
+    });
+
+    // Mobile navigation button event listeners
+    $btnPrevMobile.click(function() {
+        if (counter <= 0) {
+            counter = 0;
+            //disable previous button
+            $btnPrev.prop('disabled', true);
+            $btnPrevMobile.prop('disabled', true);
+        } else {
+            counter--;
+            $btnNext.prop('disabled', false);
+            $btnNextMobile.prop('disabled', false);
+            updatePlayer();
+        }
+        updatePlayerButtons();
+    });
+
+    $btnNextMobile.click(function() {
+        if (counter >= contentArray.length - 1) {
+            counter = contentArray.length - 1;
+            $btnNext.prop('disabled', true);
+            $btnNextMobile.prop('disabled', true);
+        } else {
+            counter++;
+            $btnPrev.prop('disabled', false);
+            $btnPrevMobile.prop('disabled', false);
+            updatePlayer();
+        }
+        updatePlayerButtons();
     });
 });

@@ -2,7 +2,6 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
     display: none;
-    background-color: #e1e6ea;
 }
 
 #project-title {
@@ -39,13 +38,45 @@
 .button-group {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-top: 1rem;
     max-width: 800px;
     position: relative;
     outline: none;
     text-align: center;
+    gap: 2rem;
+}
+
+.mobile-nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+/* Ensure all mobile nav buttons are properly aligned */
+.mobile-nav-buttons .player-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    transition: .22s;
+    position: relative;
+}
+
+/* Close button visibility */
+.mobile-close-btn {
+    display: none;
+    font-size: inherit;
+    position: relative;
+}
+
+.desktop-close-btn {
+    display: block;
 }
 
 .stills-button-group {
@@ -73,6 +104,12 @@ button {
     /* cursor: pointer; */
 }
 
+/* Override close button styles for mobile */
+#btn-close-mobile {
+    font-size: inherit;
+    position: relative;
+}
+
 
 #btn-close:active {
     color: white;
@@ -85,12 +122,12 @@ button {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    /* cursor: pointer; */
+    cursor: pointer;
     transition: .22s;
 }
 
 .player-btn-container:hover {
-    background-color: rgb(191, 191, 191); 
+    /* Removed circle hover effect */
 }
 
 .player-btn-container:active .player-btn g {
@@ -107,6 +144,98 @@ button {
 
 .player-btn-disabled g {
     fill: rgb(190, 190, 190) !important;
+}
+
+/* Desktop Side Arrows */
+.desktop-side-arrows {
+    display: none;
+}
+
+.side-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.side-arrow#btn-prev {
+    left: -120px;
+}
+
+.side-arrow#btn-next {
+    right: -120px;
+}
+
+/* Show side arrows on desktop */
+@media (min-width: 768px) {
+    .desktop-side-arrows {
+        display: block;
+    }
+    
+    .mobile-nav-buttons {
+        display: none;
+    }
+    
+    .mobile-close-btn {
+        display: none;
+    }
+    
+    .desktop-close-btn {
+        display: block;
+    }
+    
+    /* Make desktop close button 10% smaller */
+    .desktop-close-btn svg {
+        width: 21px;
+        height: 22px;
+    }
+    
+    .player-container,
+    .stills-player-container {
+        position: relative;
+    }
+}
+
+/* Show mobile nav buttons on mobile */
+@media (max-width: 767px) {
+    .desktop-side-arrows {
+        display: none;
+    }
+    
+    .mobile-nav-buttons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .mobile-close-btn {
+        display: block;
+        font-size: inherit;
+        position: relative;
+    }
+    
+    .desktop-close-btn {
+        display: none;
+    }
+    
+    .button-group {
+        justify-content: center;
+        gap: 0;
+        align-items: center;
+    }
+    
+    /* Ensure perfect alignment of all mobile nav buttons */
+    .mobile-nav-buttons .player-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    /* Make mobile close button 20% smaller */
+    .mobile-close-btn svg {
+        width: 18px;
+        height: 19px;
+    }
 }
 
 #video-gallery {

@@ -1,3 +1,42 @@
+/* Index page font size adjustments */
+/* Keep header elements as is (Anthony Gasparro and Production Designer) */
+body.full-page .header-title {
+  font-size: 1.2rem; /* Keep original size */
+}
+
+body.full-page .header-subtitle {
+  font-size: 0.93rem; /* Keep original size */
+}
+
+body.full-page header h1 {
+  font-size: 2rem; /* Keep original size */
+}
+
+body.full-page header h4 {
+  font-size: 1.5rem; /* Keep original size */
+}
+
+/* Make remaining elements another 20% smaller (36% total reduction) */
+body.full-page .home-link {
+  font-size: 1.28rem; /* 2rem * 0.64 */
+}
+
+body.full-page div > a {
+  font-size: 1.28rem; /* 2rem * 0.64 */
+}
+
+body.full-page #contact-link {
+  font-size: 0.832rem; /* 1.3rem * 0.64 */
+}
+
+body.full-page #more-link {
+  font-size: 2.24rem; /* 3.5rem * 0.64 */
+}
+
+body.full-page footer p {
+  font-size: 0.544rem; /* 0.85rem * 0.64 */
+}
+
 main ul {
   max-width: 800px;
   list-style: none;
@@ -30,11 +69,14 @@ main ul {
 .bottom-links {
   margin-top: 3rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+#more-link {
+  margin-top: 1rem;
 }
 
 
@@ -109,13 +151,21 @@ div > a {
 
 @media (min-width: 600px) {
   .bottom-links {
-    flex-direction: column;
-    align-items: flex-start;
     margin-top: 4.5rem;
   }
 
-  #more-link {
-    margin-top: 1rem;
+  /* Index page responsive font size adjustments */
+  /* Keep header elements as is */
+  body.full-page header h1 {
+    font-size: 2rem; /* Keep original size */
   }
 
+  body.full-page header h4 {
+    font-size: 1.5rem; /* Keep original size */
+  }
+
+  /* Make remaining elements another 20% smaller (36% total reduction) */
+  body.full-page footer p {
+    font-size: 0.544rem; /* 0.85rem * 0.64 */
+  }
 }

@@ -127,20 +127,14 @@
 
     <!-- Video Player Container -->
     <div id="gallery-player-container">
-        <hr>
         <div class="player-container">
             <p class="text-center mb-0" id="project-title"></p>
             <p class="text-center mb-2" id="project-subtitle"></p>
-            <div class="iframe-container">
-                <iframe src="" allow="autoplay; fullscreen" allowfullscreen id="iframe"></iframe>
-            </div>
-            <div class="button-group">
-                <!-- <button id="btn-prev" class="btn"><i class="fas fa-angle-left"></i></button> -->
-
-
+            
+            <!-- Desktop Side Arrows -->
+            <div class="desktop-side-arrows">
                 <!-- Previous Button -->
-
-                <div class="player-btn-container" id="btn-prev">
+                <div class="player-btn-container side-arrow" id="btn-prev">
                     <svg class="player-btn" width="18px" height="22px" viewBox="0 0 13 22" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -153,17 +147,8 @@
                     </svg>
                 </div>
 
-
-                <!-- Close Button -->
-                <div class="player-btn-container" id="btn-close">
-                    <i class="fa fa-times"></i>
-                </div>
-
-
                 <!-- Next Button -->
-
-
-                <div class="player-btn-container" id="btn-next">
+                <div class="player-btn-container side-arrow" id="btn-next">
                     <svg class="player-btn" width="13px" height="22px" viewBox="0 0 13 22" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -175,12 +160,61 @@
                         </g>
                     </svg>
                 </div>
+            </div>
+            
+            <div class="iframe-container">
+                <iframe src="" allow="autoplay; fullscreen" allowfullscreen id="iframe"></iframe>
+            </div>
+            
+            <div class="button-group">
+                <!-- Mobile Navigation Buttons -->
+                <div class="mobile-nav-buttons">
+                    <!-- Previous Button -->
+                    <div class="player-btn-container" id="btn-prev-mobile">
+                        <svg class="player-btn" width="18px" height="22px" viewBox="0 0 13 22" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="-" transform="translate(-358.000000, -251.000000)" fill="#0E0000">
+                                    <polygon id="Fill-2"
+                                        points="368.5741 251.0001 358.0001 261.5741 368.5601 272.1351 370.6821 270.0131 362.2431 261.5741 370.6951 253.1211">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
 
+                    <!-- Close Button (Mobile) -->
+                    <div class="player-btn-container mobile-close-btn" id="btn-close-mobile">
+                        <svg width="23" height="24" viewBox="0 0 47 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.2076" y1="1.29192" x2="46.2043" y2="46.2886" stroke="black" stroke-width="2"/>
+                            <line x1="46.2042" y1="2.71004" x2="1.20752" y2="47.7067" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </div>
 
+                    <!-- Next Button -->
+                    <div class="player-btn-container" id="btn-next-mobile">
+                        <svg class="player-btn" width="13px" height="22px" viewBox="0 0 13 22" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="-" transform="translate(-395.000000, -251.000000)" fill="#0E0000">
+                                    <polygon id="Fill-1"
+                                        points="397.121 251 395 253.121 403.453 261.574 395.014 270.013 397.135 272.135 407.695 261.574">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
 
+                <!-- Close Button (Desktop) -->
+                <div class="player-btn-container desktop-close-btn" id="btn-close">
+                    <svg width="23" height="24" viewBox="0 0 47 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.2076" y1="1.29192" x2="46.2043" y2="46.2886" stroke="black" stroke-width="2"/>
+                        <line x1="46.2042" y1="2.71004" x2="1.20752" y2="47.7067" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
             </div>
         </div>
-        <hr>
     </div>
 
     <!-- Video gallery -->
