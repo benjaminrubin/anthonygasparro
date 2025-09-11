@@ -60,7 +60,8 @@ main ul {
 }
 
 .header-subtitle {
-  composes: outfit-medium;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
   font-size: .93rem;
   margin-top: .2rem;
 }
