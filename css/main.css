@@ -1,20 +1,4 @@
-/* Index page font size adjustments */
-/* Keep header elements as is (Anthony Gasparro and Production Designer) */
-body.full-page .header-title {
-  font-size: 1.2rem; /* Keep original size */
-}
-
-body.full-page .header-subtitle {
-  font-size: 0.93rem; /* Keep original size */
-}
-
-body.full-page header h1 {
-  font-size: 2rem; /* Keep original size */
-}
-
-body.full-page header h4 {
-  font-size: 1.5rem; /* Keep original size */
-}
+/* Index page font size adjustments - removed conflicting styles */
 
 /* Make remaining elements another 20% smaller (36% total reduction) */
 body.full-page .home-link {
@@ -48,22 +32,32 @@ main ul {
   line-height: 1.3;
 }
 
-/* Header styles */
+/* Completely isolated header styles for index.html only */
 .header-title {
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Serif", serif !important;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 500 !important;
+  font-style: italic !important;
   font-variation-settings: "wdth" 100;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  font-size: 1.2rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  margin-bottom: -5px !important;
+  transition: 0.32s !important;
+  width: max-content !important;
+  margin-top: 0 !important;
 }
 
 .header-subtitle {
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  font-size: .93rem;
-  margin-top: .2rem;
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: .93rem !important;
+  margin-top: .2rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.5px !important;
+  transition: 0.32s !important;
+  width: max-content !important;
+  margin-bottom: 0 !important;
 }
 
 
@@ -152,21 +146,13 @@ div > a {
 
 /* Mobile view - increase all elements by 50% */
 @media (max-width: 599px) {
-  /* Header elements - increase by 50% */
-  body.full-page .header-title {
-    font-size: 1.8rem; /* 1.2rem * 1.5 */
+  /* Header elements - increase by 50% - isolated for index.html */
+  .header-title {
+    font-size: 1.8rem !important; /* 1.2rem * 1.5 */
   }
 
-  body.full-page .header-subtitle {
-    font-size: 1.395rem; /* 0.93rem * 1.5 */
-  }
-
-  body.full-page header h1 {
-    font-size: 3rem; /* 2rem * 1.5 */
-  }
-
-  body.full-page header h4 {
-    font-size: 2.25rem; /* 1.5rem * 1.5 */
+  .header-subtitle {
+    font-size: 1.395rem !important; /* 0.93rem * 1.5 */
   }
 
   /* Remaining elements - increase by 50% */
@@ -196,14 +182,13 @@ div > a {
     margin-top: 4.5rem;
   }
 
-  /* Index page responsive font size adjustments */
-  /* Keep header elements as is */
-  body.full-page header h1 {
-    font-size: 2rem; /* Keep original size */
+  /* Desktop styles for index.html headers - completely isolated */
+  .header-title {
+    font-size: 1.2rem !important; /* Keep original size */
   }
 
-  body.full-page header h4 {
-    font-size: 1.5rem; /* Keep original size */
+  .header-subtitle {
+    font-size: .93rem !important; /* Keep original size */
   }
 
   /* Make remaining elements another 20% smaller (36% total reduction) */
