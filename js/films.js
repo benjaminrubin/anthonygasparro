@@ -1,6 +1,13 @@
 // Array containing info on all films:
 const films = [
     {
+        title: "I Play Rocky",
+        subtitle: "",
+        thumbnailUrl: "i_play_rocky_coming_soon.png",
+        videoUrl: "https://player.vimeo.com/video/1221609210?badge=0&autopause=0&player_id=0&app_id=58479",
+        padding: "56.25% 0 0 0",
+    },
+    {
         title: "The Mastermind",
         subtitle: "Kelly Reichardt",
         thumbnailUrl: "the_mastermind.webp",
