@@ -1,0 +1,482 @@
+/* Shared styles for every page: fonts, base, header, footer, navigation. */
+
+/* Fonts (self-hosted copies of the Google Fonts files) */
+/* Noto Serif italic — latin-ext */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/noto-serif-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Noto Serif italic — latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/noto-serif-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Outfit normal — latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(../fonts/outfit-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Outfit normal — latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(../fonts/outfit-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Icons: a three-glyph subset of Font Awesome 5 Free Solid (bars, times, angle-up).
+   Font Awesome Free 5.15.4, fontawesome.com, font licensed SIL OFL 1.1 */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(../fonts/fa-solid-subset.woff2) format('woff2');
+}
+
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.fa-bars:before { content: "\f0c9"; }
+.fa-times:before { content: "\f00d"; }
+.fa-angle-up:before { content: "\f106"; }
+
+/* Base styles */
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  font-size: 12px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+/* Layout */
+.full-page {
+  height: 100vh;
+}
+
+.full-page footer {
+  position: absolute;
+  bottom: 10px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 3rem 2rem 1rem;
+  padding-left: 1rem;
+}
+
+.home-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 3rem 1.5rem 3rem;
+}
+
+
+/* Removed generic header styles to prevent conflicts with #nav-title and #nav-subtitle */
+
+h2 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-bottom: 0.4rem;
+}
+
+
+#nav-title {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: -5px;
+  transition: 0.32s;
+  width: max-content;
+}
+
+/* Secondary page header styles */
+#nav-subtitle {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: .93rem;
+  margin-top: .2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  transition: 0.32s;
+  width: max-content;
+  /* it is a <p>; these two keep the metrics the old <h4> had */
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  /* cursor: default; */
+  text-align: center;
+  font-weight: 400;
+  color: gray;
+  bottom: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Links and interactive elements */
+#branja-url {
+  color: gray;
+}
+
+/* Components */
+.card {
+  border: none;
+}
+
+.thumbnail-card {
+  padding: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+#wme-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+#main-image {
+  max-height: 90vh;
+}
+
+/* Media Queries */
+@media (min-width: 767px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+
+  .thumbnail-card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-container {
+    padding-left: 1.5rem;
+  }
+}
+
+/* Links */
+#contact-link {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+/* Bottom links layout */
+.bottom-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav .sidebar-brand {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.sidebar-nav .text-secondary {
+  color: black !important;
+}
+
+.sidebar-nav > li:first-child {
+  line-height: 1rem;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.desktop-nav {
+    display: none;
+    max-width: 480px;
+}
+
+.secondary-nav {
+    display: none;
+}
+
+.desktop-nav>ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.desktop-nav>ul>li {
+    margin-left: .8rem;
+    margin-right: .8rem;
+    text-align: center;
+    /* width: 130px; */
+}
+
+.desktop-nav>ul>li a {
+    text-decoration: none;
+    color: gray;
+    font-family: Helvetica, sans-serif;
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
+    display: inline-block;
+    padding-bottom: .6rem;
+}
+
+.desktop-nav>ul>li a:hover {
+    -webkit-transform: skewX(-13deg) !important;
+    -moz-transform: skewX(-13deg) !important;
+    -ms-transform: skewX(-13deg) !important;
+    transform: skewX(-13deg) !important;
+    transform-origin: left bottom;
+}
+
+.desktop-nav .selected-page {
+    color: black !important;
+}
+
+.mobile-header {
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 767px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .secondary-nav {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .secondary-nav a {
+        text-decoration: none;
+        color: gray;
+        text-transform: uppercase;
+    }
+
+    .secondary-nav a:hover {
+        color: black;
+    }
+
+    .selected-page-secondary {
+        color: black !important;
+        text-decoration: line-through !important;
+        text-decoration-color: turquoise !important;
+        text-decoration-thickness: .2rem !important;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+
+/* Mobile Nav Related */
+
+.menu-toggle {
+    border-radius: 50%;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 50px;
+    z-index: 999;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover {
+    color: #fff;
+}
+
+.menu-toggle:hover {
+    background: #343a40;
+    /* cursor: pointer !important; */
+}
+
+#sidebar-wrapper {
+    position: fixed;
+    z-index: 80;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    width: 250px;
+    font-size: 1.2rem;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper.active {
+    right: 0;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    /* font-weight: 600; */
+    /* font-size: 1.8rem; */
+}
+
+.sidebar-nav a:hover {
+    color: black;
+}
+
+.sidebar-nav li {
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+}
+
+.sidebar-brand {
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem !important;
+}
+
+@media (min-width: 767px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+/* Scroll to top button */
+
+.scroll-to-top {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white !important;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 45px;
+    cursor: auto;
+}
+
+.scroll-to-top:focus,
+.scroll-to-top:hover {
+    color: white;
+}
+
+.scroll-to-top:hover {
+    background: #343a40;
+}
+
+.scroll-to-top i {
+    font-weight: 800;
+}

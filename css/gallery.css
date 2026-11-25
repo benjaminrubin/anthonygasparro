@@ -126,10 +126,6 @@ button {
     transition: .22s;
 }
 
-.player-btn-container:hover {
-    /* Removed circle hover effect */
-}
-
 .player-btn-container:active .player-btn g {
     fill: white;
 }
@@ -260,8 +256,9 @@ button {
     cursor: pointer;
 }
 
-img {
-    /* object-fit: contain; */
+/* thumbnails carry width/height attributes so the page does not jump while they load */
+.card-img-top {
+    height: auto;
 }
 
 @media (min-width: 600px) {
