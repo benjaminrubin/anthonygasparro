@@ -8,10 +8,10 @@ const commercials = [
         padding: '56.25% 0 0 0'
     },
     {
-        title: 'Hyundai',
-        subtitle: 'dir. Gui Borchert',
-        thumbnailUrl: 'hyundai_thumbnail.png',
-        videoUrl: 'https://player.vimeo.com/video/1083174598?title=0&byline=0&portrait=0',
+        title: 'Budweiser',
+        subtitle: 'dir. Chloé Zhao',
+        thumbnailUrl: 'budweiser_thumbnail.png',
+        videoUrl: 'https://player.vimeo.com/video/687464692?title=0&byline=0&portrait=0',
         padding: '56.34% 0 0 0'
     },
     {
@@ -71,11 +71,11 @@ const commercials = [
         padding: '56.25% 0 0 0'
     },
     {
-        title: 'Audi',
-        subtitle: 'dir. Stacy Wall',
-        thumbnailUrl: 'audi_thumbnail_girl.png',
-        videoUrl: 'https://player.vimeo.com/video/117690334?title=0&byline=0&portrait=0',
-        padding: '56.25% 0 0 0'
+        title: 'Hyundai',
+        subtitle: 'dir. Gui Borchert',
+        thumbnailUrl: 'hyundai_thumbnail.png',
+        videoUrl: 'https://player.vimeo.com/video/1083174598?title=0&byline=0&portrait=0',
+        padding: '56.34% 0 0 0'
     },
     {
         title: 'Adidas',
